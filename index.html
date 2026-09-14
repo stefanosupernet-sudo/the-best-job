@@ -11,9 +11,8 @@
 <script>
 (async function () {
   try {
-    const res = await fetch("site.gz.b64");
-    if (!res.ok) throw new Error("HTTP " + res.status);
-    const b64 = (await res.text()).trim();
+    const parts = await Promise.all([fetch("site.0.b64").then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.text();}),fetch("site.1.b64").then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.text();}),fetch("site.2.b64").then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.text();}),fetch("site.3.b64").then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.text();}),fetch("site.4.b64").then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.text();}),fetch("site.5.b64").then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.text();}),fetch("site.6.b64").then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.text();}),fetch("site.7.b64").then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.text();}),fetch("site.8.b64").then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.text();})]);
+    const b64 = parts.join("").replace(/\s+/g, "");
     const bin = atob(b64);
     const bytes = new Uint8Array(bin.length);
     for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
