@@ -1,3 +1,37 @@
 <!DOCTYPE html>
 <html lang="it">
-<head><meta charset="UTF-8"><title>The Best Job</title></head><body><p>Loading full site...</p><script>location.replace('./site.html')</script></body></html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Best Job | Consulenza strategica Italia–Polonia</title>
+<meta name="description" content="Consulenza strategica bidirezionale Italia–Polonia. Supporto startup e soluzioni AI.">
+</head>
+<body>
+<p id="msg" style="font-family:system-ui,sans-serif;text-align:center;margin-top:3rem;color:#555">Caricamento del sito…</p>
+<script>
+(async function () {
+  try {
+    const res = await fetch("site.gz.b64");
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    const b64 = (await res.text()).trim();
+    const bin = atob(b64);
+    const bytes = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    if (typeof DecompressionStream === "undefined") {
+      document.getElementById("msg").textContent = "Browser non supportato. Usa Chrome, Firefox o Safari aggiornati.";
+      return;
+    }
+    const ds = new DecompressionStream("gzip");
+    const stream = new Blob([bytes]).stream().pipeThrough(ds);
+    const html = await new Response(stream).text();
+    document.open();
+    document.write(html);
+    document.close();
+  } catch (e) {
+    document.getElementById("msg").textContent = "Errore di caricamento: " + e.message;
+    console.error(e);
+  }
+})();
+</script>
+</body>
+</html>
