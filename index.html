@@ -3,19 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Best Job</title>
-<style>
-body{font-family:system-ui,sans-serif;max-width:640px;margin:4rem auto;padding:0 1.5rem;line-height:1.6;color:#0f172a}
-h1{font-size:1.75rem;color:#312e81}
-a{color:#0e9bb8}
-code{background:#f3f5fb;padding:2px 6px;border-radius:4px}
-</style>
+<title>The Best Job | Consulenza strategica Italia–Polonia</title>
+<meta name="description" content="Consulenza strategica bidirezionale Italia–Polonia. Supporto startup e soluzioni AI.">
+<link rel="canonical" href="https://thebestjob.org/">
 </head>
 <body>
-<h1>The Best Job</h1>
-<p>Consulenza strategica Italia–Polonia · Supporto startup · Digitale e AI</p>
-<p>Repository collegata. Carica il file <code>index.html</code> completo (e l’immagine <code>soluzione-qr-shazam.jpg</code>) tramite <strong>Add file → Upload files</strong> su GitHub per pubblicare il sito.</p>
-<p>Poi attiva <strong>Settings → Pages → Deploy from branch → main</strong>.</p>
-<p>Sito ufficiale: <a href="https://thebestjob.org/">thebestjob.org</a></p>
+<p id="msg" style="font-family:system-ui,sans-serif;text-align:center;margin-top:3rem;color:#555">Caricamento del sito…</p>
+<script>
+(async function () {
+  try {
+    const parts = await Promise.all([fetch("payload.0.b64").then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.text()}),fetch("payload.1.b64").then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.text()}),fetch("payload.2.b64").then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.text()}),fetch("payload.3.b64").then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.text()}),fetch("payload.4.b64").then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.text()}),fetch("payload.5.b64").then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.text()}),fetch("payload.6.b64").then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.text()}),fetch("payload.7.b64").then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.text()}),fetch("payload.8.b64").then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.text()}),fetch("payload.9.b64").then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.text()})]);
+    const b64 = parts.join("").replace(/\s+/g, "");
+    const bin = atob(b64);
+    const bytes = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    if (typeof DecompressionStream === "undefined") {
+      document.getElementById("msg").textContent = "Browser non supportato. Usa Chrome, Firefox o Safari aggiornati.";
+      return;
+    }
+    const ds = new DecompressionStream("gzip");
+    const stream = new Blob([bytes]).stream().pipeThrough(ds);
+    const html = await new Response(stream).text();
+    document.open();
+    document.write(html);
+    document.close();
+  } catch (e) {
+    document.getElementById("msg").textContent = "Errore: " + e.message;
+    console.error(e);
+  }
+})();
+</script>
 </body>
 </html>
