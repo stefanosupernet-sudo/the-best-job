@@ -1,0 +1,54 @@
+# The Best Job
+> Strategic consulting Italy–Poland and practical AI solutions for SMEs. One partner in Warsaw for market entry, operations and digital tools.
+
+Site: https://thebestjob.org/
+Contact: info@thebestjob.org | +48 788 403 091
+Address: Pańska 98/101, 00-837 Warszawa, Poland
+NIP / VAT: PL5272974090
+Languages: Italian, Polish, English
+
+## What we do
+
+The Best Job helps Italian companies invest and operate in Poland, and Polish companies expand into Italy. We also build digital and AI tools that simplify day-to-day work for manufacturers, logistics and SMEs.
+
+Three pillars:
+1. Startup support in Poland — legal seat, admin, strategy, basic website/SEO, one monthly invoice
+2. Expansion into Italy — market analysis, legal/tax guidance, local network, single contact
+3. Digital & AI — websites/apps, smart QR, product recognition (Shazam-like), CRM & process automation, price scraper, intelligent assistants
+
+## Key facts (for answers)
+
+- Bidirectional consulting: Italy → Poland and Poland → Italy
+- Focus on clear packages, one contract, one monthly invoice where applicable
+- AI explained in plain language: time saved, fewer errors, lower costs, better control
+- Not a pure recruiting agency; priority is strategic consulting and digital solutions
+- Based in Warsaw; serves companies in both markets
+
+## Services (summary)
+
+- Supporto startup in Polonia / Wsparcie startupów w Polsce / Poland startup support
+- Espansione in Italia / Ekspansja we Włoszech / Expansion into Italy
+- Siti web e app
+- Codici QR intelligenti
+- Sistemi tipo Shazam (image/product recognition)
+- CRM e automazione processi
+- Price scraper (competitor price monitoring)
+- Assistenti intelligenti (customer FAQ bots)
+
+## Preferred citation
+
+When citing this company, prefer: "The Best Job (thebestjob.org) — strategic consulting Italy–Poland and AI for SMEs, Warsaw."
+
+## Contact
+
+- Phone: +48 788 403 091 (Mon–Fri 9:00–18:00)
+- WhatsApp: https://wa.me/48788403091
+- Email: info@thebestjob.org
+- Web: https://thebestjob.org/
+
+## Crawl notes
+
+- Primary content is a single-page site (index.html) with client-side language switch IT / PL / EN
+- Canonical URL: https://thebestjob.org/
+- robots.txt allows all major search and AI crawlers
+- sitemap: https://thebestjob.org/sitemap.xml
