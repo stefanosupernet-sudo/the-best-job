@@ -349,7 +349,9 @@
     .lang-btn:hover,.lang-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
     header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
     .nav{height:72px;display:flex;align-items:center;justify-content:space-between}
-    .logo{font-family:Fraunces,Georgia,serif;font-size:1.25rem;font-weight:700;color:var(--primary);text-decoration:none}
+    .logo{font-family:Fraunces,Georgia,serif;font-size:1.25rem;font-weight:700;color:var(--primary);text-decoration:none;display:inline-flex;align-items:center;gap:10px}
+    .logo img{height:40px;width:auto;display:block;border-radius:6px}
+    .logo span{color:var(--accent)}
     .logo span{color:var(--accent)}
     .nav-links{display:flex;gap:28px;align-items:center;list-style:none}
     .nav-links a{text-decoration:none;font-size:.9rem;font-weight:500;color:var(--muted)}
@@ -667,7 +669,7 @@
 
 <header>
   <div class="wrap nav">
-    <a class="logo" href="#home">The Best <span>Job</span></a>
+    <a class="logo" href="#home" aria-label="The Best Job"><img src="logo.png" alt="The Best Job" width="62" height="40" decoding="async">The Best <span>Job</span></a>
     <ul class="nav-links">
       <li><a id="nav-services" href="#servizi">Servizi</a></li>
       <li><a id="nav-ai" href="#impatto-ai">Impatto dell'AI</a></li>
