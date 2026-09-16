@@ -13,6 +13,10 @@
   <meta name="theme-color" content="#312e81">
   <meta http-equiv="Content-Language" content="it">
   <link rel="canonical" href="https://thebestjob.org/">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="logo.png">
+
   <link rel="alternate" hreflang="it" href="https://thebestjob.org/">
   <link rel="alternate" hreflang="pl" href="https://thebestjob.org/?lang=pl">
   <link rel="alternate" hreflang="en" href="https://thebestjob.org/?lang=en">
@@ -350,7 +354,8 @@
     header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
     .nav{height:72px;display:flex;align-items:center;justify-content:space-between}
     .logo{font-family:Fraunces,Georgia,serif;font-size:1.25rem;font-weight:700;color:var(--primary);text-decoration:none;display:inline-flex;align-items:center;gap:10px}
-    .logo img{height:40px;width:auto;display:block;border-radius:6px}
+    .logo picture{display:contents}
+    .logo img{height:40px;width:auto;display:block;border-radius:6px;object-fit:contain}
     .logo span{color:var(--accent)}
     .logo span{color:var(--accent)}
     .nav-links{display:flex;gap:28px;align-items:center;list-style:none}
@@ -669,7 +674,10 @@
 
 <header>
   <div class="wrap nav">
-    <a class="logo" href="#home" aria-label="The Best Job"><img src="logo.png" alt="The Best Job" width="62" height="40" decoding="async">The Best <span>Job</span></a>
+    <a class="logo" href="#home" aria-label="The Best Job"><picture>
+        <source type="image/webp" srcset="logo-header.webp 1x, logo-header@2x.webp 2x">
+        <img src="logo-header.png" srcset="logo-header.png 1x, logo-header@2x.png 2x" alt="The Best Job" width="62" height="40" decoding="async" fetchpriority="high">
+      </picture>The Best <span>Job</span></a>
     <ul class="nav-links">
       <li><a id="nav-services" href="#servizi">Servizi</a></li>
       <li><a id="nav-ai" href="#impatto-ai">Impatto dell'AI</a></li>
