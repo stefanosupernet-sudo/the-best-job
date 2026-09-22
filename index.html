@@ -3,35 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Best Job | Consulenza strategica Italia–Polonia e AI per PMI — Varsavia</title>
-<meta name="description" content="Partner strategico per aziende italiane e polacche: supporto startup in Polonia, espansione in Italia, digitalizzazione e AI. NIP 5272974090.">
+<title>The Best Job</title>
 <meta name="google-site-verification" content="ql5iCQlE3fS_5FshpZWN54nE3ISZ5xK-URVPubaoddI">
 <link rel="canonical" href="https://thebestjob.org/">
-<meta name="robots" content="index, follow">
 </head>
 <body>
 <p id="msg" style="font-family:system-ui,sans-serif;text-align:center;margin-top:3rem;color:#555">Caricamento del sito…</p>
 <script>
 (async function () {
   try {
-    const parts = await Promise.all([fetch("p0.b64").then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.text()}),fetch("p1.b64").then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.text()}),fetch("p2.b64").then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.text()}),fetch("p3.b64").then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.text()}),fetch("p4.b64").then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.text()}),fetch("p5.b64").then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.text()}),fetch("p6.b64").then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.text()}),fetch("p7.b64").then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.text()}),fetch("p8.b64").then(r=>{if(!r.ok)throw new Error("HTTP "+r.status);return r.text()})]);
-    const b64 = parts.join("").replace(/\s+/g, "");
-    const bin = atob(b64);
-    const bytes = new Uint8Array(bin.length);
-    for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
-    if (typeof DecompressionStream === "undefined") {
-      document.getElementById("msg").textContent = "Browser non supportato. Usa Chrome, Firefox o Safari aggiornati.";
-      return;
-    }
-    const ds = new DecompressionStream("gzip");
-    const stream = new Blob([bytes]).stream().pipeThrough(ds);
-    const html = await new Response(stream).text();
+    // Restore from last complete publish on this repo
+    const r = await fetch("https://cdn.jsdelivr.net/gh/stefanosupernet-sudo/the-best-job@da47574f3d1ec8137f4980b434752501b8a5ec2d/index.html");
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    const html = await r.text();
     document.open();
     document.write(html);
     document.close();
   } catch (e) {
-    document.getElementById("msg").textContent = "Errore: " + e.message;
-    console.error(e);
+    document.getElementById("msg").innerHTML = "Errore di caricamento. <a href=\"https://github.com/stefanosupernet-sudo/the-best-job\">Apri il repository</a><br>" + e.message;
   }
 })();
 </script>
