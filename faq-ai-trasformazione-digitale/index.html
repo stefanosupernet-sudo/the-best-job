@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI e trasformazione digitale per le aziende: FAQ | The Best Job</title>
+<meta name="description" content="Domande frequenti su intelligenza artificiale e trasformazione digitale per PMI: da dove iniziare, costi, ROI, automazione e integrazioni. The Best Job.">
+<meta name="robots" content="index, follow">
+<meta name="google-site-verification" content="ql5iCQlE3fS_5FshpZWN54nE3ISZ5xK-URVPubaoddI">
+<link rel="canonical" href="https://thebestjob.org/faq-ai-trasformazione-digitale/">
+</head>
+<body>
+<p id="m" style="font-family:system-ui;text-align:center;margin-top:3rem;color:#555">Caricamento FAQ…</p>
+<script>
+(async()=>{
+try{
+const parts=await Promise.all([fetch("f0.b64").then(r=>{if(!r.ok)throw new Error(r.status);return r.text()}),fetch("f1.b64").then(r=>{if(!r.ok)throw new Error(r.status);return r.text()}),fetch("f2.b64").then(r=>{if(!r.ok)throw new Error(r.status);return r.text()})]);
+const b64=parts.join("").replace(/\s+/g,"");
+const bin=atob(b64);
+const bytes=new Uint8Array(bin.length);
+for(let i=0;i<bin.length;i++)bytes[i]=bin.charCodeAt(i);
+const html=await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream("gzip"))).text();
+document.open();document.write(html);document.close();
+}catch(e){document.getElementById("m").textContent="Errore: "+e.message;}
+})();
+</script>
+</body>
+</html>
