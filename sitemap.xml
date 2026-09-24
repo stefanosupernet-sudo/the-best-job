@@ -3,12 +3,36 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://thebestjob.org/</loc>
-    <lastmod>2026-09-15</lastmod>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://thebestjob.org/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://thebestjob.org/?lang=pl"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thebestjob.org/?lang=en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thebestjob.org/"/>
+  </url>
+  <url>
+    <loc>https://thebestjob.org/Contacts/</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thebestjob.org/contatti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thebestjob.org/Contacts/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thebestjob.org/Contacts/"/>
+  </url>
+  <url>
+    <loc>https://thebestjob.org/contatti/</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://thebestjob.org/contatti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thebestjob.org/Contacts/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thebestjob.org/Contacts/"/>
+  </url>
+  <url>
+    <loc>https://thebestjob.org/contacts/</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
