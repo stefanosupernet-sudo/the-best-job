@@ -455,7 +455,7 @@
     .msg{max-width:82%;padding:10px 14px;border-radius:14px;font-size:.9rem;line-height:1.45}
     .msg.bot{background:#fff;border:1px solid var(--border);color:var(--fg);align-self:flex-start;border-bottom-left-radius:4px}
     .msg.user{background:var(--primary);color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
-    .chat-input-row{display:flex;gap:8px;padding:12px;border-top:1px solid var(--border);background:#fff}
+    .chat-consent a{text-decoration:underline}.chat-input-row{display:flex;gap:8px;padding:12px;border-top:1px solid var(--border);background:#fff}
     .chat-input-row input{flex:1;border:1px solid var(--border);border-radius:999px;padding:10px 16px;font:inherit;font-size:.9rem;outline:none}
     .chat-input-row input:focus{border-color:var(--accent)}
     .chat-input-row button{background:var(--primary);color:#fff;border:none;border-radius:999px;padding:10px 18px;font:inherit;font-size:.85rem;font-weight:600;cursor:pointer}
@@ -1036,6 +1036,11 @@
         <input id="chatInput" placeholder="Scrivi un messaggio…" onkeydown="if(event.key==='Enter')sendMsg()">
         <button id="chat-send-btn" onclick="sendMsg()">Invia</button>
       </div>
+      <label class="chat-consent" style="display:flex;gap:8px;align-items:flex-start;padding:8px 12px 4px;font-size:.75rem;color:var(--muted);line-height:1.4;cursor:pointer">
+        <input type="checkbox" id="chatConsent" style="margin-top:3px;flex-shrink:0" onchange="tbjSetChatConsent(this.checked)">
+        <span id="chat-consent-label">Acconsento al trattamento del messaggio (e dei contatti se li indico) per ricevere risposta e proposta commerciale da The Best Job, e all’eventuale invio al titolare se la domanda non è coperta dalle FAQ. <a href="/privacy/" style="color:var(--primary)">Privacy</a></span>
+      </label>
+      <p id="chat-privacy-note" style="padding:0 12px 10px;font-size:.7rem;color:var(--muted);line-height:1.35;margin:0">Senza consenso il chatbot risponde comunque in locale; non salviamo né inoltriamo la domanda. Diritti GDPR: info@thebestjob.org</p>
     </div>
   </div>
 </section>
@@ -1090,6 +1095,7 @@
       <a id="footer-nav-solutions" href="#soluzioni">Soluzioni digitali</a>
       <a id="footer-about" href="#chi-siamo">Chi siamo</a>
       <a id="footer-faq" href="#faq">FAQ</a>
+        <a id="footer-privacy" href="/privacy/">Privacy / GDPR</a>
     </div>
     <div>
       <h4 id="footer-contacts">Contatti</h4>
@@ -1132,6 +1138,7 @@ var LANG = {
     "hero-cta1": "Richiedi un preventivo", "hero-cta2": "Chiama ora",
     "hero-faq-link": "Domande frequenti sui 3 pilastri →",
     "nav-faq": "FAQ", "mnav-faq": "FAQ", "footer-faq": "FAQ",
+    "footer-privacy": "Privacy / GDPR",
     "faq-kicker": "FAQ",
     "faq-h2": "Domande frequenti sui tre pilastri",
     "faq-lead": "Risposte chiare per imprenditori che vogliono aprire in Polonia, entrare in Italia o digitalizzare l'azienda con l'AI. Pensa a queste FAQ come a una guida pratica.",
@@ -1242,6 +1249,8 @@ var LANG = {
     "chat-online": "Online ora",
     "chat-welcome-msg": "Ciao! Sono l'assistente di The Best Job. Posso aiutarti su apertura azienda in Polonia o in Italia, consulenza strategica e soluzioni digitali. Cosa vorresti sapere?",
     "chat-send-btn": "Invia",
+    "chat-consent-label": "Acconsento al trattamento del messaggio (e dei contatti se li indico) per ricevere risposta e proposta commerciale da The Best Job, e all’eventuale invio al titolare se la domanda non è coperta dalle FAQ. Privacy: /privacy/",
+    "chat-privacy-note": "Senza consenso il chatbot risponde comunque in locale; non salviamo né inoltriamo la domanda. Diritti GDPR: info@thebestjob.org",
     "contact-kicker": "Contatti", "contact-h2": "Parliamone insieme",
     "contact-lead": "Compila il modulo oppure scrivici. Ti rispondiamo entro 24 ore.",
     "contact-hours": "Lunedì–venerdì, 9:00–18:00", "contact-wa": "Scrivici, rispondiamo in tempi brevi", "contact-email-label": "Email ufficiale",
@@ -1269,6 +1278,7 @@ var LANG = {
     "hero-cta1": "Zapytaj o ofertę", "hero-cta2": "Zadzwoń teraz",
     "hero-faq-link": "Częste pytania o 3 filarach →",
     "nav-faq": "FAQ", "mnav-faq": "FAQ", "footer-faq": "FAQ",
+    "footer-privacy": "Privacy / RODO",
     "faq-kicker": "FAQ",
     "faq-h2": "Częste pytania o trzech filarach",
     "faq-lead": "Jasne odpowiedzi dla przedsiębiorców, którzy chcą otworzyć firmę w Polsce, wejść do Włoch lub cyfryzować firmę z AI.",
@@ -1379,6 +1389,8 @@ var LANG = {
     "chat-online": "Online teraz",
     "chat-welcome-msg": "Cześć! Jestem asystentem The Best Job. Mogę pomóc w otwarciu firmy w Polsce lub we Włoszech, doradztwie strategicznym i rozwiązaniach cyfrowych. O co chciałbyś zapytać?",
     "chat-send-btn": "Wyślij",
+    "chat-consent-label": "Wyrażam zgodę na przetwarzanie wiadomości (i danych kontaktowych, jeśli je podam) w celu odpowiedzi i propozycji handlowej The Best Job oraz ewentualnego przesłania do administratora, jeśli pytanie nie jest objęte FAQ. Polityka prywatności: /privacy/",
+    "chat-privacy-note": "Bez zgody chatbot odpowiada lokalnie; nie zapisujemy ani nie przesyłamy pytania. Prawa RODO: info@thebestjob.org",
     "contact-kicker": "Kontakt", "contact-h2": "Porozmawiajmy razem",
     "contact-lead": "Wypełnij formularz lub napisz do nas. Odpowiadamy w ciągu 24 godzin.",
     "contact-hours": "Poniedziałek–piątek, 9:00–18:00", "contact-wa": "Napisz do nas, odpowiadamy szybko", "contact-email-label": "Oficjalny e-mail",
@@ -1407,6 +1419,7 @@ var LANG = {
 
     "hero-faq-link": "FAQ on the 3 pillars →",
     "nav-faq": "FAQ", "mnav-faq": "FAQ", "footer-faq": "FAQ",
+    "footer-privacy": "Privacy / GDPR",
     "faq-kicker": "FAQ",
     "faq-h2": "Frequently asked questions on the three pillars",
     "faq-lead": "Clear answers for entrepreneurs who want to start in Poland, enter Italy, or digitalise the company with AI. Treat this FAQ as a practical guide.",
@@ -1516,6 +1529,8 @@ var LANG = {
     "chat-online": "Online now",
     "chat-welcome-msg": "Hello! I'm The Best Job's assistant. I can help with setting up a company in Poland or Italy, strategic consulting and digital solutions. What would you like to know?",
     "chat-send-btn": "Send",
+    "chat-consent-label": "I consent to processing of this message (and contact details if I provide them) so The Best Job can reply and propose collaboration, including forwarding to the controller when the question is not covered by the FAQs. Privacy: /privacy/",
+    "chat-privacy-note": "Without consent the chatbot still answers locally; we do not store or forward the question. GDPR rights: info@thebestjob.org",
     "contact-kicker": "Contact", "contact-h2": "Let's talk",
     "contact-lead": "Fill in the form or write to us. We reply within 24 hours.",
     "contact-hours": "Monday–Friday, 9:00–18:00", "contact-wa": "Message us, we reply quickly", "contact-email-label": "Official email",
@@ -1598,7 +1613,9 @@ var TBJ_FALLBACK_CFG = {
   minLen: 4,
   cooldownMs: 20000,
   storageKey: 'tbj_chat_fallback_v1',
-  maxStored: 30
+  consentKey: 'tbj_chat_consent_v1',
+  maxStored: 30,
+  retentionDays: 365
 };
 var _tbjLastFallbackAt = 0;
 
@@ -1664,6 +1681,24 @@ function tbjAnalyticsFallback(entry) {
 }
 
 /** Call when chatbot has no FAQ match. Privacy-friendly: no identity fields. */
+function tbjHasChatConsent() {
+  try {
+    var el = document.getElementById('chatConsent');
+    if (el && el.checked) {
+      localStorage.setItem(TBJ_FALLBACK_CFG.consentKey, '1');
+      return true;
+    }
+    return localStorage.getItem(TBJ_FALLBACK_CFG.consentKey) === '1';
+  } catch (e) { return false; }
+}
+
+function tbjSetChatConsent(on) {
+  try {
+    if (on) localStorage.setItem(TBJ_FALLBACK_CFG.consentKey, '1');
+    else localStorage.removeItem(TBJ_FALLBACK_CFG.consentKey);
+  } catch (e) {}
+}
+
 function logChatFallback(rawQuestion) {
   var q = tbjSanitizeQuestion(rawQuestion);
   if (q.length < TBJ_FALLBACK_CFG.minLen) return;
@@ -1676,9 +1711,12 @@ function logChatFallback(rawQuestion) {
     path: (location.pathname || '/') + (location.hash || ''),
     ts: new Date().toISOString()
   };
-  tbjStoreFallbackLocal(entry);
-  tbjSendFallbackRemote(entry);
-  tbjAnalyticsFallback(entry);
+  // Local technical log only if consent (GDPR: storage minimisation)
+  if (tbjHasChatConsent()) {
+    tbjStoreFallbackLocal(entry);
+    tbjSendFallbackRemote(entry);
+    tbjAnalyticsFallback(entry);
+  }
 }
 
 /** Debug helper: in console → tbjShowFallbacks() */
@@ -1872,6 +1910,14 @@ function askChip(el) {
 }
 
 // Init — runs after full DOM parse since script is at bottom of body
+
+// Restore chat GDPR consent checkbox
+(function(){
+  try {
+    var el = document.getElementById('chatConsent');
+    if (el && localStorage.getItem(TBJ_FALLBACK_CFG.consentKey) === '1') el.checked = true;
+  } catch(e) {}
+})();
 updateCalc();
 // Italian is already rendered in HTML, just sync the button state
 document.getElementById('btn-it').classList.add('active');
