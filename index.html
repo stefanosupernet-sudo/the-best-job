@@ -1583,6 +1583,111 @@ var CHAT_RULES = {
   ]
 };
 
+
+/* ─────────────────────────────────────────
+   Fallback monitor — privacy-friendly
+   Saves unanswered chat questions. Email/phone left in clear if the user types them (commercial follow-up). No extra identity fields collected.
+   - Always: local queue (last 30) for this browser
+   - Optional: POST to FormSubmit → info@thebestjob.org
+   - Optional: Google Analytics event if gtag exists
+   Configure: window.TBJ_FALLBACK_ENDPOINT = 'https://...' to override
+───────────────────────────────────────── */
+var TBJ_FALLBACK_CFG = {
+  emailEndpoint: 'https://formsubmit.co/ajax/info@thebestjob.org',
+  maxLen: 400,
+  minLen: 4,
+  cooldownMs: 20000,
+  storageKey: 'tbj_chat_fallback_v1',
+  maxStored: 30
+};
+var _tbjLastFallbackAt = 0;
+
+function tbjSanitizeQuestion(q) {
+  if (!q) return '';
+  var s = String(q).replace(/\s+/g, ' ').trim();
+  // Keep email/phone in clear if the user typed them — commercial follow-up + FAQ improvement.
+  // Only normalize whitespace and cap length (no identity fields are collected beyond the message).
+  if (s.length > TBJ_FALLBACK_CFG.maxLen) s = s.slice(0, TBJ_FALLBACK_CFG.maxLen) + '…';
+  return s;
+}
+
+function tbjStoreFallbackLocal(entry) {
+  try {
+    var raw = localStorage.getItem(TBJ_FALLBACK_CFG.storageKey);
+    var arr = raw ? JSON.parse(raw) : [];
+    if (!Array.isArray(arr)) arr = [];
+    arr.unshift(entry);
+    if (arr.length > TBJ_FALLBACK_CFG.maxStored) arr = arr.slice(0, TBJ_FALLBACK_CFG.maxStored);
+    localStorage.setItem(TBJ_FALLBACK_CFG.storageKey, JSON.stringify(arr));
+  } catch (e) { /* private mode / blocked */ }
+}
+
+function tbjSendFallbackRemote(entry) {
+  var endpoint = (window.TBJ_FALLBACK_ENDPOINT || TBJ_FALLBACK_CFG.emailEndpoint || '').trim();
+  if (!endpoint) return;
+  var payload = {
+    _subject: '[Chat FAQ] Domanda senza risposta — possibile lead',
+    _template: 'table',
+    source: 'thebestjob-chat-fallback',
+    note: 'Contatto lasciato in chiaro se presente nel testo. Ricontattare per risposta e collaborazione.',
+    question: entry.q,
+    lang: entry.lang,
+    path: entry.path,
+    ts: entry.ts
+  };
+  try {
+    if (navigator.sendBeacon) {
+      var blob = new Blob([JSON.stringify(payload)], { type: 'application/json' });
+      navigator.sendBeacon(endpoint, blob);
+    } else {
+      fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload),
+        mode: 'cors',
+        keepalive: true
+      }).catch(function(){});
+    }
+  } catch (e) {}
+}
+
+function tbjAnalyticsFallback(entry) {
+  try {
+    if (typeof gtag === 'function') {
+      gtag('event', 'chat_fallback', {
+        event_category: 'chat',
+        event_label: (entry.q || '').slice(0, 100),
+        language: entry.lang
+      });
+    }
+  } catch (e) {}
+}
+
+/** Call when chatbot has no FAQ match. Privacy-friendly: no identity fields. */
+function logChatFallback(rawQuestion) {
+  var q = tbjSanitizeQuestion(rawQuestion);
+  if (q.length < TBJ_FALLBACK_CFG.minLen) return;
+  var now = Date.now();
+  if (now - _tbjLastFallbackAt < TBJ_FALLBACK_CFG.cooldownMs) return;
+  _tbjLastFallbackAt = now;
+  var entry = {
+    q: q,
+    lang: (typeof currentLang !== 'undefined' ? currentLang : 'it'),
+    path: (location.pathname || '/') + (location.hash || ''),
+    ts: new Date().toISOString()
+  };
+  tbjStoreFallbackLocal(entry);
+  tbjSendFallbackRemote(entry);
+  tbjAnalyticsFallback(entry);
+}
+
+/** Debug helper: in console → tbjShowFallbacks() */
+function tbjShowFallbacks() {
+  try {
+    return JSON.parse(localStorage.getItem(TBJ_FALLBACK_CFG.storageKey) || '[]');
+  } catch (e) { return []; }
+}
+
 function generateResponse(prompt) {
   var p = (prompt || '').toLowerCase().trim();
   var rules = CHAT_RULES[currentLang] || CHAT_RULES.it;
@@ -1643,6 +1748,7 @@ function generateResponse(prompt) {
           "You can also rephrase using words like: Poland, Italy, AI, automation, CRM, costs."
     };
     reply = fallbacks[currentLang] || fallbacks.it;
+    logChatFallback(prompt);
     return reply;
   }
 
