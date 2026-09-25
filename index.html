@@ -1015,7 +1015,7 @@
     <div>
       <p class="kicker" id="chat-kicker">Assistente AI</p>
       <h2 id="chat-h2" style="font-size:2rem;margin:10px 0 12px">Chiedici qualcosa, subito</h2>
-      <p id="chat-desc" style="color:var(--muted)">Il nostro assistente risponde alle domande più comuni su apertura azienda in Polonia o in Italia e trasformazione digitale.</p>
+      <p id="chat-desc" style="color:var(--muted)">Risposte basate sulle nostre FAQ: startup in Polonia, espansione in Italia, digitale e AI. Per il tuo caso concreto ti invitiamo a una consulenza con The Best Job.</p>
       <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:20px">
         <button class="chip" id="chip1" onclick="askChip(this)">Come apro un'azienda in Polonia?</button>
         <button class="chip" id="chip2" onclick="askChip(this)">Come entrare nel mercato italiano?</button>
@@ -1236,7 +1236,7 @@ var LANG = {
     "about-li3": "Piccole e medie imprese", "about-li4": "Imprenditori che vogliono innovare senza complicazioni",
     "about-li5": "Aziende italiane e polacche in espansione internazionale",
     "chat-kicker": "Assistente AI", "chat-h2": "Chiedici qualcosa, subito",
-    "chat-desc": "Il nostro assistente risponde alle domande più comuni su apertura azienda in Polonia o in Italia e trasformazione digitale.",
+    "chat-desc": "Risposte basate sulle nostre FAQ: startup in Polonia, espansione in Italia, digitale e AI. Per il tuo caso concreto ti invitiamo a una consulenza con The Best Job.",
     "chip1": "Come apro un'azienda in Polonia?", "chip2": "Come entrare nel mercato italiano?",
     "chip3": "Cos'è la trasformazione digitale?", "chip4": "Cosa include la consulenza strategica?",
     "chat-online": "Online ora",
@@ -1373,7 +1373,7 @@ var LANG = {
     "about-li3": "Małe i średnie przedsiębiorstwa", "about-li4": "Przedsiębiorcy chcący innowować bez komplikacji",
     "about-li5": "Włoskie i polskie firmy w ekspansji międzynarodowej",
     "chat-kicker": "Asystent AI", "chat-h2": "Zapytaj nas o cokolwiek, teraz",
-    "chat-desc": "Nasz asystent odpowiada na najczęstsze pytania dotyczące otwarcia firmy w Polsce lub we Włoszech oraz transformacji cyfrowej.",
+    "chat-desc": "Odpowiedzi oparte na naszych FAQ: startup w Polsce, ekspansja we Włoszech, cyfryzacja i AI. W konkretnej sprawie zapraszamy na konsultację z The Best Job.",
     "chip1": "Jak otworzyć firmę w Polsce?", "chip2": "Jak wejść na rynek włoski?",
     "chip3": "Czym jest transformacja cyfrowa?", "chip4": "Co obejmuje doradztwo strategiczne?",
     "chat-online": "Online teraz",
@@ -1510,7 +1510,7 @@ var LANG = {
     "about-li3": "Small and medium enterprises", "about-li4": "Entrepreneurs who want to innovate without complexity",
     "about-li5": "Italian and Polish companies in international expansion",
     "chat-kicker": "AI Assistant", "chat-h2": "Ask us anything, right now",
-    "chat-desc": "Our assistant answers the most common questions about setting up a company in Poland or Italy and digital transformation.",
+    "chat-desc": "Answers based on our FAQs: startup in Poland, expansion into Italy, digital and AI. For your specific case we invite you to a consultation with The Best Job.",
     "chip1": "How do I open a company in Poland?", "chip2": "How do I enter the Italian market?",
     "chip3": "What is digital transformation?", "chip4": "What does strategic consulting include?",
     "chat-online": "Online now",
@@ -1538,49 +1538,130 @@ var LANG = {
 ───────────────────────────────────────── */
 var CHAT_RULES = {
   it: [
-    { k: ['azienda','aprire','aprire','startup','sede','registr'], r: "Per aprire un'azienda in Polonia offriamo un pacchetto completo: sede legale, personale italiano, numero di telefono dedicato e assistenza con le pratiche burocratiche. Tutto in un'unica fattura mensile, senza sorprese. Vuoi fissare una chiamata gratuita?" },
-    { k: ['cost','prezzo','quanto','pacchett','tariffa'], r: "I nostri pacchetti sono a canone fisso mensile — nessuna sorpresa. Il costo varia in base ai servizi scelti. Ti consiglio di contattarci per un preventivo su misura: info@thebestjob.org o WhatsApp +48 788 403 091." },
-    { k: ['assumer','assunz','personale','dipendent','recruit','lavoro','consulenz'], r: "Il nostro focus è la consulenza strategica bidirezionale Italia–Polonia: ingresso sul mercato, supporto operativo e digitalizzazione. Scrivici a info@thebestjob.org per un preventivo su misura." },
-    { k: ['ai','digital','trasformaz','automatiz','intelligenz'], r: "La trasformazione digitale significa rendere più veloci e precisi i processi aziendali con strumenti intelligenti: meno lavoro manuale, meno errori, più controllo. Non serve essere esperti: lo implementiamo noi. Possiamo fissare una demo gratuita?" },
-    { k: ['camera','commercio','cciaa','espansion','invest','italia'], r: "Siamo il partner strategico per aziende italiane e polacche che vogliono crescere oltre confine. Consulenza di mercato, strategie di ingresso e digitalizzazione in entrambe le direzioni. Contattaci per un progetto su misura." },
-    { k: ['tasse','fiscale','nip','iva','contabilit'], r: "Gestiamo la parte fiscale e amministrativa in Polonia, inclusa la registrazione e la contabilità. Il nostro NIP è 5272974090. Contattaci per i dettagli: info@thebestjob.org." },
-    { k: ['contatt','email','telefono','whatsapp','orario'], r: "Puoi contattarci qui:\n📧 info@thebestjob.org\n📞 +48 788 403 091 (anche WhatsApp)\n📍 Pańska 98/101, 00-837 Varsavia\nLun–Ven 9:00–18:00" }
+    { k: ['qr','codice qr','codici qr'], r: "I codici QR intelligenti collegano cataloghi, istruzioni e tracciamento prodotti: un prodotto o una ubicazione in magazzino si apre con lo smartphone. Riducono errori e carta. Vuoi una demo o una consulenza su un processo concreto?" },
+    { k: ['shazam','riconoscimento'], r: "I sistemi tipo Shazam riconoscono prodotti, suoni o immagini in magazzino e logistica, così trovi un pezzo senza cercare a mano. È una delle nostre soluzioni digitali. Possiamo analizzare il tuo magazzino in una consulenza." },
+    { k: ['price scraper','prezzi competitor','monitoraggio prezzi'], r: "Il price scraper monitora i prezzi dei competitor in tempo quasi reale, così aggiorni listini e strategie senza lavoro manuale. Ti interessa una prova sul tuo settore? Scrivici per una consulenza." },
+    { k: ['crm','automazion'], r: "CRM e automazione uniscono clienti, ordini, email e documenti in un flusso unico: meno inserimenti doppi e meno errori. Si parte da un processo ripetitivo. Prenota una consulenza senza impegno: info@thebestjob.org." },
+    { k: ['assistente','chatbot','servizio clienti'], r: "Gli assistenti intelligenti rispondono alle domande ripetitive (anche di notte) e passano al team le richieste complesse. Non sostituiscono le persone: liberano tempo. Possiamo progettare un assistente sui tuoi FAQ e processi." },
+    { k: ['roi','costo ai','quanto costa','prezzo','preventivo','investimento'], r: "Non c'è un prezzo unico: dipende dal processo e dal livello di personalizzazione. Una piccola automazione può partire in modo contenuto; un sistema integrato richiede analisi. Il ROI si misura in ore risparmiate, meno errori e più produttività. Fissiamo una consulenza gratuita per stimare il tuo caso." },
+    { k: ['sp z','sp. z','krs','nip','partita iva','tassazione','fiscale','contabilit'], r: "In Polonia gestiamo sede legale, pratiche KRS/NIP, supporto amministrativo e orientamento fiscale. Il nostro NIP è 5272974090 (sede a Varsavia). Un solo contratto e una fattura mensile. Contattaci per i dettagli sul tuo progetto." },
+    { k: ['aprire azienda','aprire societ','startup','sede legale','registrazione','delocalizz','investire in polonia','fare business in polonia'], r: "Per aprire in Polonia offriamo un pacchetto chiavi in mano: sede legale e sala riunioni a Varsavia, supporto operativo e admin, telefono dedicato, consulenza di mercato, pratiche e licenze, sito e SEO di base. Un referente in italiano. Vuoi una chiamata di consulenza senza impegno?" },
+    { k: ['espansione in italia','mercato italiano','azienda polacca','entrare in italia'], r: "Per le aziende polacche in Italia: analisi di mercato, sede o rete commerciale, legale/fiscale, network e un unico referente. Non sempre serve la sede subito. Parliamone in consulenza: info@thebestjob.org o +48 788 403 091." },
+    { k: ['trasformazione digitale','digitalizz','intelligenza artificiale',' intelligenz','automati','processi aziendali'], r: "La trasformazione digitale (e l'AI) servono a ridurre lavoro manuale, automatizzare processi ripetivi e usare meglio i dati — un passo alla volta, senza dover digitalizzare tutto prima. Partiamo dal processo più costoso in ore. Approfondisci le FAQ: /faq-ai-trasformazione-digitale/ oppure richiedi una consulenza." },
+    { k: ['pmi','piccola impresa','azienda tradizionale'], r: "Sì, lavoriamo con PMI e aziende tradizionali: non serve un reparto IT. Si inizia da un processo ripetitivo e si misura il risultato. The Best Job accompagna Italia↔Polonia e le soluzioni digitali. Consulenza: info@thebestjob.org." },
+    { k: ['chi siete','the best job','cosa fate','servizi','partner'], r: "The Best Job è il partner strategico bidirezionale Italia–Polonia: supporto startup in Polonia, espansione in Italia, digitale e AI per PMI. Sede a Varsavia (Pańska 98/101). Un referente, italiano/polacco/inglese. Scrivici per una consulenza su misura." },
+    { k: ['contatt','email','telefono','whatsapp','orario','dove siete','indirizzo'], r: "📧 info@thebestjob.org\n📞 +48 788 403 091 (WhatsApp)\n📍 Pańska 98/101, 00-837 Varsavia\nLun–Ven 9:00–18:00\nPossiamo fissare una consulenza senza impegno." },
+    { k: ['faq','domande frequenti','approfond'], r: "Trovi le FAQ generali sui 3 pilastri in questa pagina (#faq) e la FAQ approfondita su AI e trasformazione digitale qui: https://thebestjob.org/faq-ai-trasformazione-digitale/ — oppure dimmi il tuo dubbio e ti rispondo qui, poi se serve passiamo a una consulenza." }
   ],
   pl: [
-    { k: ['firma','otwor','startup','siedzib','rejestr'], r: "Aby otworzyć firmę w Polsce, oferujemy kompletny pakiet: siedziba prawna, personel mówiący po włosku, dedykowany telefon i pomoc w formalnościach. Wszystko w jednej miesięcznej fakturze. Chcesz bezpłatną rozmowę?" },
-    { k: ['koszt','cena','ile','pakiet','opłat'], r: "Nasze pakiety mają stały miesięczny abonament — bez niespodzianek. Koszt zależy od wybranych usług. Skontaktuj się z nami po wycenę: info@thebestjob.org lub WhatsApp +48 788 403 091." },
-    { k: ['zatrudn','personel','pracown','rekrut','praca','doradztw'], r: "Nasz fokus to dwukierunkowe doradztwo strategiczne Włochy–Polska: wejście na rynek, wsparcie operacyjne i cyfryzacja. Napisz do nas: info@thebestjob.org po wycenę." },
-    { k: ['ai','cyfrow','transformac','automatyz','sztuczn'], r: "Transformacja cyfrowa to przyspieszenie i usprawnienie procesów firmy inteligentnymi narzędziami: mniej ręcznej pracy, mniej błędów, więcej kontroli. Nie musisz być ekspertem — my to wdrożymy. Chcesz bezpłatne demo?" },
-    { k: ['izba','handlow','cciaa','ekspansj','inwest','włoszech'], r: "Jesteśmy strategicznym partnerem dla włoskich i polskich firm, które chcą rosnąć za granicą. Doradztwo rynkowe, strategie wejścia i cyfryzacja w obu kierunkach. Skontaktuj się po projekt szyty na miarę." },
-    { k: ['podatk','nip','vat','księgow'], r: "Zajmujemy się kwestiami podatkowymi i administracyjnymi w Polsce, w tym rejestracją i księgowością. Nasz NIP to 5272974090. Skontaktuj się: info@thebestjob.org." },
-    { k: ['kontakt','email','telefon','whatsapp','godzin'], r: "Skontaktuj się z nami:\n📧 info@thebestjob.org\n📞 +48 788 403 091 (też WhatsApp)\n📍 Pańska 98/101, 00-837 Warszawa\nPn–Pt 9:00–18:00" }
+    { k: ['qr'], r: "Inteligentne kody QR łączą katalogi, instrukcje i śledzenie produktów w magazynie. Mniej błędów i papieru. Chcesz demo lub konsultację?" },
+    { k: ['shazam','rozpoznawan'], r: "Systemy typu Shazam rozpoznają produkty lub obrazy w logistyce — szybciej znajdujesz towar. Możemy omówić to na konsultacji." },
+    { k: ['price scraper','ceny konkur'], r: "Price scraper monitoruje ceny konkurencji niemal w czasie rzeczywistym. Napisz po konsultację: info@thebestjob.org." },
+    { k: ['crm','automatyz'], r: "CRM i automatyzacja łączą klientów, zamówienia i dokumenty w jeden przepływ. Zaczynamy od powtarzalnego procesu. Konsultacja bez zobowiązań." },
+    { k: ['asystent','chatbot','obsługa klienta'], r: "Inteligentni asystenci odpowiadają na powtarzalne pytania (także w nocy) i przekazują trudniejsze sprawy zespołowi. Nie zastępują ludzi." },
+    { k: ['roi','koszt','cena','wycen','ile'], r: "Cena zależy od procesu i personalizacji. ROI mierzymy w zaoszczędzonych godzinach i mniejszej liczbie błędów. Umówmy bezpłatną konsultację." },
+    { k: ['krs','nip','vat','podat','księgow'], r: "W Polsce wspieramy siedzibę, KRS/NIP i administrację. NIP: 5272974090, Warszawa. Jeden kontrakt, jedna faktura miesięczna." },
+    { k: ['otworzyć firm','startup','siedzib','rejestr','polska'], r: "Pakiet pod klucz: siedziba prawna w Warszawie, wsparcie operacyjne, telefon, doradztwo rynkowe, formalności, strona i SEO. Język włoski/polski/angielski. Konsultacja?" },
+    { k: ['włoch','italia','ekspansj'], r: "Dla firm z Polski we Włoszech: analiza rynku, siedziba lub sieć sprzedaży, prawo/podatki, network i jeden opiekun. Napisz: info@thebestjob.org." },
+    { k: ['cyfryz','ai','sztuczn','automatyz','transformac'], r: "Cyfryzacja i AI redukują pracę ręczną i porządkują dane — krok po kroku. FAQ: /faq-ai-trasformazione-digitale/ lub konsultacja z The Best Job." },
+    { k: ['kontakt','email','telefon','whatsapp'], r: "📧 info@thebestjob.org\n📞 +48 788 403 091\n📍 Pańska 98/101, Warszawa\nPn–pt 9:00–18:00" },
+    { k: ['faq'], r: "FAQ o AI: https://thebestjob.org/faq-ai-trasformazione-digitale/ — albo zadaj pytanie tutaj, a potem możemy umówić konsultację." }
   ],
   en: [
-    { k: ['company','open','startup','register','office'], r: "To open a company in Poland we offer a complete package: registered office, Italian-speaking staff, a dedicated phone number and help with all paperwork. One flat monthly invoice, no surprises. Shall we schedule a free call?" },
-    { k: ['cost','price','how much','package','fee'], r: "Our packages have a flat monthly fee — no surprises. The cost depends on the services chosen. Contact us for a tailored quote: info@thebestjob.org or WhatsApp +48 788 403 091." },
-    { k: ['hire','staff','employee','recruit','job','consult'], r: "Our focus is bidirectional Italy–Poland strategic consulting: market entry, operational support and digitalisation. Write to us: info@thebestjob.org for a tailored quote." },
-    { k: ['ai','digital','transform','automat','intelligence'], r: "Digital transformation means making your business processes faster and more accurate with smart tools: less manual work, fewer errors, more control. No expertise needed — we implement it for you. Want a free demo?" },
-    { k: ['chamber','commerce','cciaa','expansion','invest','italy'], r: "We are the strategic partner for Italian and Polish companies that want to grow across borders. Market advisory, entry strategies and digitalisation in both directions. Contact us for a tailored project." },
-    { k: ['tax','vat','nip','accounti','fiscal'], r: "We handle tax and administrative matters in Poland, including registration and accounting. Our NIP is 5272974090. Contact us for details: info@thebestjob.org." },
-    { k: ['contact','email','phone','whatsapp','hours'], r: "You can reach us:\n📧 info@thebestjob.org\n📞 +48 788 403 091 (also WhatsApp)\n📍 Pańska 98/101, 00-837 Warsaw\nMon–Fri 9:00–18:00" }
+    { k: ['qr'], r: "Smart QR codes link catalogues, instructions and product tracking in the warehouse. Less paper and fewer errors. Want a demo or a consultation?" },
+    { k: ['shazam','recognition'], r: "Shazam-like systems recognise products or images in logistics so staff find items faster. We can review your warehouse in a consultation." },
+    { k: ['price scraper','competitor price'], r: "Our price scraper monitors competitor prices near real time. Ask for a consultation: info@thebestjob.org." },
+    { k: ['crm','automat'], r: "CRM and automation connect clients, orders, email and documents in one flow. We start from one repetitive process. Book a no-obligation consultation." },
+    { k: ['assistant','chatbot','customer service'], r: "Intelligent assistants answer repetitive questions (even at night) and hand complex cases to your team. They free time; they don't replace people." },
+    { k: ['roi','cost','price','quote','how much'], r: "There is no single price: it depends on the process and customisation. ROI is measured in hours saved and fewer errors. Let's estimate your case in a free consultation." },
+    { k: ['krs','nip','vat','tax','account'], r: "In Poland we support legal seat, KRS/NIP and admin. NIP 5272974090, Warsaw. One contract, one monthly invoice." },
+    { k: ['open company','startup','legal seat','register','poland','invest'], r: "Turnkey package to start in Poland: legal seat and meeting room in Warsaw, ops/admin support, dedicated phone, market advice, permits, basic website/SEO. One contact in Italian/English. Shall we schedule a consultation?" },
+    { k: ['italy','italian market','expansion'], r: "For Polish firms entering Italy: market analysis, seat or sales network, legal/tax, network and one contact. Write info@thebestjob.org or +48 788 403 091." },
+    { k: ['digital','ai','transform','automat'], r: "Digital transformation and AI cut manual work and improve data use — step by step. Full FAQ: /faq-ai-trasformazione-digitale/ or book a consultation with The Best Job." },
+    { k: ['contact','email','phone','whatsapp'], r: "📧 info@thebestjob.org\n📞 +48 788 403 091\n📍 Pańska 98/101, 00-837 Warsaw\nMon–Fri 9:00–18:00" },
+    { k: ['faq'], r: "AI & digital FAQ: https://thebestjob.org/faq-ai-trasformazione-digitale/ — or ask here, then we can book a consultation." }
   ]
 };
 
 function generateResponse(prompt) {
-  var p = prompt.toLowerCase();
+  var p = (prompt || '').toLowerCase().trim();
   var rules = CHAT_RULES[currentLang] || CHAT_RULES.it;
+  var reply = null;
+
+  // 1) Match esatto su keyword
   for (var i = 0; i < rules.length; i++) {
     for (var j = 0; j < rules[i].k.length; j++) {
-      if (p.indexOf(rules[i].k[j]) !== -1) return rules[i].r;
+      if (p.indexOf(rules[i].k[j]) !== -1) { reply = rules[i].r; break; }
     }
+    if (reply) break;
   }
-  var fallbacks = {
-    it: "Grazie per il messaggio! Per una risposta più dettagliata ti invito a scriverci a info@thebestjob.org o su WhatsApp +48 788 403 091. Siamo disponibili lunedì–venerdì 9–18.",
-    pl: "Dziękujemy za wiadomość! Po bardziej szczegółową odpowiedź zapraszamy do kontaktu: info@thebestjob.org lub WhatsApp +48 788 403 091. Dostępni pn–pt 9–18.",
-    en: "Thanks for your message! For a more detailed answer please write to info@thebestjob.org or WhatsApp +48 788 403 091. Available Mon–Fri 9:00–18:00."
-  };
-  return fallbacks[currentLang] || fallbacks.it;
+
+  // 2) Fallback strutturato se nessuna regola copre la domanda
+  if (!reply) {
+    var fallbacks = {
+      it: "Non ho una risposta precisa nelle nostre FAQ per questa domanda.\n\n" +
+          "Posso aiutarti su:\n" +
+          "• aprire azienda / startup in Polonia (sede, KRS, NIP)\n" +
+          "• espansione di aziende polacche in Italia\n" +
+          "• digitale e AI (CRM, QR, Shazam, price scraper, assistenti)\n" +
+          "• costi, ROI e come iniziare\n\n" +
+          "Approfondisci qui:\n" +
+          "→ FAQ AI e trasformazione digitale: https://thebestjob.org/faq-ai-trasformazione-digitale/\n" +
+          "→ FAQ sui 3 pilastri: https://thebestjob.org/#faq\n\n" +
+          "Per il tuo caso concreto, The Best Job offre una consulenza senza impegno:\n" +
+          "📧 info@thebestjob.org\n" +
+          "📞 WhatsApp +48 788 403 091\n" +
+          "📍 Pańska 98/101, Varsavia — Lun–Ven 9:00–18:00\n\n" +
+          "Puoi anche riformulare la domanda con una di queste parole: Polonia, Italia, AI, automazione, CRM, costi.",
+      pl: "Nie mam dokładnej odpowiedzi w naszych FAQ na to pytanie.\n\n" +
+          "Mogę pomóc w tematach:\n" +
+          "• otwarcie firmy / startup w Polsce (siedziba, KRS, NIP)\n" +
+          "• ekspansja firm polskich we Włoszech\n" +
+          "• cyfryzacja i AI (CRM, QR, Shazam, price scraper, asystenci)\n" +
+          "• koszty, ROI i od czego zacząć\n\n" +
+          "Więcej informacji:\n" +
+          "→ FAQ AI: https://thebestjob.org/faq-ai-trasformazione-digitale/\n" +
+          "→ FAQ 3 filary: https://thebestjob.org/#faq\n\n" +
+          "W konkretnej sprawie The Best Job oferuje konsultację bez zobowiązań:\n" +
+          "📧 info@thebestjob.org\n" +
+          "📞 WhatsApp +48 788 403 091\n" +
+          "📍 Pańska 98/101, Warszawa — pn–pt 9:00–18:00\n\n" +
+          "Możesz też przeformułować pytanie, używając słów: Polska, Włochy, AI, automatyzacja, CRM, koszty.",
+      en: "I don't have an exact match in our FAQs for this question.\n\n" +
+          "I can help with:\n" +
+          "• opening a company / startup in Poland (legal seat, KRS, NIP)\n" +
+          "• Polish companies expanding into Italy\n" +
+          "• digital & AI (CRM, QR, Shazam, price scraper, assistants)\n" +
+          "• costs, ROI and where to start\n\n" +
+          "Go deeper here:\n" +
+          "→ AI & digital FAQ: https://thebestjob.org/faq-ai-trasformazione-digitale/\n" +
+          "→ Three pillars FAQ: https://thebestjob.org/#faq\n\n" +
+          "For your specific case, The Best Job offers a no-obligation consultation:\n" +
+          "📧 info@thebestjob.org\n" +
+          "📞 WhatsApp +48 788 403 091\n" +
+          "📍 Pańska 98/101, Warsaw — Mon–Fri 9:00–18:00\n\n" +
+          "You can also rephrase using words like: Poland, Italy, AI, automation, CRM, costs."
+    };
+    reply = fallbacks[currentLang] || fallbacks.it;
+    return reply;
+  }
+
+  // 3) Soft CTA sulle risposte già coperte (se non citano già il contatto)
+  var low = reply.toLowerCase();
+  if (low.indexOf('info@thebestjob.org') === -1 &&
+      low.indexOf('whatsapp') === -1 &&
+      low.indexOf('+48') === -1) {
+    var cta = {
+      it: "\n\nPer una consulenza senza impegno sul tuo caso: info@thebestjob.org · WhatsApp +48 788 403 091.",
+      pl: "\n\nKonsultacja bez zobowiązań: info@thebestjob.org · WhatsApp +48 788 403 091.",
+      en: "\n\nNo-obligation consultation: info@thebestjob.org · WhatsApp +48 788 403 091."
+    };
+    reply += (cta[currentLang] || cta.it);
+  }
+  return reply;
 }
+
+
 
 /* ─────────────────────────────────────────
    Core language switcher — direct ID swap
