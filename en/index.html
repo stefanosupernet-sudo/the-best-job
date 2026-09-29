@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -685,7 +685,7 @@
       <li><a id="nav-solutions" href="#soluzioni">Soluzioni</a></li>
       <li><a id="nav-how" href="#come-funziona">Come funziona</a></li>
       <li><a id="nav-faq" href="/faq-ai-trasformazione-digitale/">FAQ</a></li>
-      <li><a id="nav-cta" class="btn btn-primary" style="min-height:42px" href="/contatti/">Richiedi preventivo</a></li>
+      <li><a id="nav-cta" class="btn btn-primary" style="min-height:42px" href="#contatti">Richiedi preventivo</a></li>
     </ul>
     <button class="ham" onclick="document.getElementById('mm').classList.toggle('open')">☰</button>
   </div>
@@ -695,7 +695,7 @@
     <a id="mnav-solutions" href="#soluzioni" onclick="closeMM()">Soluzioni</a>
     <a id="mnav-how" href="#come-funziona" onclick="closeMM()">Come funziona</a>
     <a id="mnav-faq" href="/faq-ai-trasformazione-digitale/" onclick="closeMM()">FAQ</a>
-    <a id="mnav-cta" class="btn btn-primary" href="/contatti/" onclick="closeMM()">Richiedi preventivo</a>
+    <a id="mnav-cta" class="btn btn-primary" href="#contatti" onclick="closeMM()">Richiedi preventivo</a>
   </div>
 </header>
 
@@ -707,7 +707,7 @@
       <h1 id="hero-h1">Aumentiamo la <em style="color:var(--primary);font-style:normal">produttività</em> della tua impresa</h1>
       <p class="lead" id="hero-lead">Ti aiutiamo a crescere in Polonia e in Italia con consulenza strategica e a semplificare i processi con soluzioni digitali e intelligenza artificiale. Tutto spiegato in modo chiaro.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" id="hero-cta1" href="/contatti/">Richiedi un preventivo</a>
+        <a class="btn btn-primary" id="hero-cta1" href="#contatti">Richiedi un preventivo</a>
         <a class="btn btn-ghost" id="hero-cta2" href="tel:+48788403091">Chiama ora</a>
       </div>
       <a class="faq-link-hero" id="hero-faq-link" href="#faq">Domande frequenti sui 3 pilastri →</a>
@@ -796,7 +796,7 @@
           <li id="chamber-li4" style="color:rgba(255,255,255,.85)">Supporto amministrativo, legale e fiscale in Polonia e in Italia</li>
           <li id="chamber-li5" style="color:rgba(255,255,255,.85)">Pacchetti tailor-made per l'espansione internazionale</li>
         </ul>
-        <a class="btn btn-accent" id="chamber-cta" href="/contatti/" style="margin-top:28px">Parliamo del tuo progetto</a>
+        <a class="btn btn-accent" id="chamber-cta" href="#contatti" style="margin-top:28px">Parliamo del tuo progetto</a>
       </div>
       <div>
         <div class="chamber-logo-item reveal" id="chamber-box1">🇮🇹 → 🇵🇱 Aziende italiane in Polonia<span>Partner strategico per investire e produrre in Polonia</span></div>
@@ -843,7 +843,7 @@
       <div class="myth"><h4 id="myth2-h">Non invade l'azienda</h4><p id="myth2-p" style="opacity:.75;margin-top:6px">Si collega a quello che già usi, un passo alla volta. Non serve cambiare tutto in una notte.</p></div>
     </div>
     <p class="intro" id="ai-footer" style="margin-top:32px">L'AI non è solo per le grandi multinazionali. È utile proprio dove il titolare fa ancora troppe cose a mano. Pochi strumenti, scelti bene, cambiano la settimana di lavoro.</p>
-    <a class="btn btn-accent" id="ai-cta" href="/contatti/" style="margin-top:24px">Parliamone, senza impegno</a>
+    <a class="btn btn-accent" id="ai-cta" href="#contatti" style="margin-top:24px">Parliamone, senza impegno</a>
   </div>
 </section>
 
@@ -1004,7 +1004,7 @@
     </div>
 
     <p style="margin-top:28px">
-      <a class="btn btn-primary" id="faq-cta" href="/contatti/">Parliamone senza impegno</a>
+      <a class="btn btn-primary" id="faq-cta" href="#contatti">Parliamone senza impegno</a>
     </p>
   </div>
 </section>
@@ -1814,13 +1814,13 @@ function generateResponse(prompt) {
 /* Path-based i18n: / = it, /pl/ = pl, /en/ = en */
 (function() {
   var p = (location.pathname || '/').replace(/\/+$/, '') || '/';
-  var lang = 'it';
-  if (p === '/pl' || p.indexOf('/pl/') === 0) lang = 'pl';
+  var lang = 'en';
+  if (false && p === '/pl' || p.indexOf('/pl/') === 0) lang = 'pl';
   else if (p === '/en' || p.indexOf('/en/') === 0) lang = 'en';
-  window.TBJ_PATH_LANG = lang;
+  window.TBJ_PATH_LANG = 'en'; // forced
 })();
 
-var currentLang = (window.TBJ_PATH_LANG || 'it');
+var currentLang = 'en';
 
 
 function setLang(l) {
@@ -1931,11 +1931,7 @@ function askChip(el) {
 })();
 updateCalc();
 // Italian is already rendered in HTML, just sync the button state
-if (window.TBJ_PATH_LANG && window.TBJ_PATH_LANG !== 'it') {
-  setLang(window.TBJ_PATH_LANG);
-} else {
-  document.getElementById('btn-it').classList.add('active');
-}
+setLang('en');
 
 
 /* Soft scroll reveal — respects reduced motion */
