@@ -26,59 +26,113 @@
   <meta name="twitter:description" content="Contact The Best Job in Warsaw: +48 788 403 091, info@thebestjob.org, Pańska 98/101. Strategic Italy–Poland consulting, startup support and AI solutions for SMEs.">
   <link rel="icon" type="image/png" href="/logo.png">
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "ContactPage",
-        "@id": "https://thebestjob.org/contatti/#page",
-        "url": "https://thebestjob.org/contatti/",
-        "name": "Contatti — The Best Job",
-        "description": "Pagina contatti di The Best Job: telefono, email, WhatsApp e sede a Varsavia per consulenza strategica Italia–Polonia e soluzioni digitali/AI.",
-        "isPartOf": { "@id": "https://thebestjob.org/#website" },
-        "about": { "@id": "https://thebestjob.org/#organization" },
-        "inLanguage": ["it", "pl", "en"]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ContactPage",
+      "@id": "https://thebestjob.org/contatti/#page",
+      "url": "https://thebestjob.org/contatti/",
+      "name": "Contatti — The Best Job",
+      "description": "Pagina contatti di The Best Job: telefono, email, WhatsApp e sede a Varsavia per consulenza strategica Italia–Polonia e soluzioni digitali/AI.",
+      "isPartOf": {
+        "@id": "https://thebestjob.org/#website"
       },
-      {
-        "@type": ["Organization", "ProfessionalService", "LocalBusiness"],
-        "@id": "https://thebestjob.org/#organization",
-        "name": "The Best Job",
-        "url": "https://thebestjob.org",
-        "logo": "https://thebestjob.org/logo.png",
+      "about": {
+        "@id": "https://thebestjob.org/#organization"
+      },
+      "inLanguage": [
+        "it",
+        "pl",
+        "en"
+      ]
+    },
+    {
+      "@type": [
+        "Organization",
+        "ProfessionalService",
+        "LocalBusiness"
+      ],
+      "@id": "https://thebestjob.org/#organization",
+      "name": "The Best Job",
+      "url": "https://thebestjob.org/",
+      "logo": "https://thebestjob.org/logo.png",
+      "telephone": "+48-788-403-091",
+      "email": "info@thebestjob.org",
+      "vatID": "PL5272974090",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Pańska 98/101",
+        "postalCode": "00-837",
+        "addressLocality": "Warszawa",
+        "addressCountry": "PL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 52.2297,
+        "longitude": 21.0122
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
         "telephone": "+48-788-403-091",
         "email": "info@thebestjob.org",
-        "vatID": "PL5272974090",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Pańska 98/101",
-          "postalCode": "00-837",
-          "addressLocality": "Warszawa",
-          "addressCountry": "PL"
+        "contactType": "customer service",
+        "availableLanguage": [
+          "Italian",
+          "Polish",
+          "English"
+        ],
+        "areaServed": [
+          "PL",
+          "IT"
+        ],
+        "hoursAvailable": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      },
+      "sameAs": [
+        "https://wa.me/48788403091"
+      ],
+      "priceRange": "$$",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "image": "https://thebestjob.org/og-image.jpg",
+      "description": "Strategic Italy–Poland consulting, startup support and digital & AI solutions for SMEs. Based in Warsaw.",
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Poland"
         },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 52.2297,
-          "longitude": 21.0122
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+48-788-403-091",
-          "email": "info@thebestjob.org",
-          "contactType": "customer service",
-          "availableLanguage": ["Italian", "Polish", "English"],
-          "areaServed": ["PL", "IT"],
-          "hoursAvailable": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-            "opens": "09:00",
-            "closes": "18:00"
-          }
-        },
-        "sameAs": ["https://wa.me/48788403091"]
-      }
-    ]
-  }
-  </script>
+        {
+          "@type": "Country",
+          "name": "Italy"
+        }
+      ]
+    }
+  ]
+}
+</script>
   <style>
     :root { --primary:#312e81; --accent:#0e9bb8; --fg:#0f172a; --muted:#5c6578; --bg:#f3f5fb; --border:#dce3f0; }
     * { box-sizing: border-box; margin: 0; padding: 0; }

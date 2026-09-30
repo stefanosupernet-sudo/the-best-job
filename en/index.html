@@ -45,301 +45,414 @@
   <meta name="twitter:image" content="https://thebestjob.org/og-image.jpg">
   <!-- Schema.org JSON-LD (Organization + ProfessionalService + WebSite + FAQ) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": ["Organization", "ProfessionalService", "LocalBusiness"],
-        "@id": "https://thebestjob.org/#organization",
-        "name": "The Best Job",
-        "url": "https://thebestjob.org",
-        "logo": "https://thebestjob.org/logo.png",
-        "image": "https://thebestjob.org/og-image.jpg",
-        "description": "Consulenza strategica bidirezionale Italia–Polonia, supporto startup e soluzioni digitali e AI per PMI.",
-        "telephone": "+48-788-403-091",
-        "email": "info@thebestjob.org",
-        "vatID": "PL5272974090",
-        "taxID": "5272974090",
-        "foundingLocation": {
-          "@type": "Place",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Warszawa",
-            "addressCountry": "PL"
-          }
-        },
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Organization",
+        "ProfessionalService",
+        "LocalBusiness"
+      ],
+      "@id": "https://thebestjob.org/#organization",
+      "name": "The Best Job",
+      "url": "https://thebestjob.org/",
+      "logo": "https://thebestjob.org/logo.png",
+      "image": "https://thebestjob.org/og-image.jpg",
+      "description": "Consulenza strategica bidirezionale Italia–Polonia, supporto startup e soluzioni digitali e AI per PMI.",
+      "telephone": "+48-788-403-091",
+      "email": "info@thebestjob.org",
+      "vatID": "PL5272974090",
+      "taxID": "5272974090",
+      "foundingLocation": {
+        "@type": "Place",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Pańska 98/101",
-          "postalCode": "00-837",
           "addressLocality": "Warszawa",
           "addressCountry": "PL"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 52.2297,
-          "longitude": 21.0122
-        },
-        "areaServed": [
-          {"@type": "Country", "name": "Poland"},
-          {"@type": "Country", "name": "Italy"}
-        ],
-        "availableLanguage": ["Italian", "Polish", "English"],
-        "contactPoint": [
-          {
-            "@type": "ContactPoint",
-            "telephone": "+48-788-403-091",
-            "contactType": "customer service",
-            "email": "info@thebestjob.org",
-            "availableLanguage": ["Italian", "Polish", "English"],
-            "areaServed": ["PL", "IT"]
-          }
-        ],
-        "sameAs": [
-          "https://wa.me/48788403091"
-        ],
-        "knowsAbout": [
-          "Strategic consulting Italy-Poland",
-          "Startup support in Poland",
-          "Market entry Italy",
-          "Digital transformation",
-          "Artificial intelligence for SMEs",
-          "Process automation",
-          "CRM integration",
-          "Price monitoring"
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://thebestjob.org/#website",
-        "url": "https://thebestjob.org",
-        "name": "The Best Job",
-        "description": "Consulenza strategica Italia–Polonia e soluzioni AI per imprese",
-        "publisher": {"@id": "https://thebestjob.org/#organization"},
-        "inLanguage": ["it", "pl", "en"],
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://thebestjob.org/?q={search_term_string}",
-          "query-input": "required name=search_term_string"
         }
       },
-      {
-        "@type": "Service",
-        "@id": "https://thebestjob.org/#service-poland",
-        "name": "Supporto startup in Polonia",
-        "serviceType": "Business consulting and market entry",
-        "provider": {"@id": "https://thebestjob.org/#organization"},
-        "areaServed": {"@type": "Country", "name": "Poland"},
-        "audience": {"@type": "BusinessAudience", "audienceType": "Italian companies"},
-        "description": "Pacchetto chiavi in mano per aprire e far crescere un'attività in Polonia: sede, supporto amministrativo, consulenza strategica e digitale."
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Pańska 98/101",
+        "postalCode": "00-837",
+        "addressLocality": "Warszawa",
+        "addressCountry": "PL"
       },
-      {
-        "@type": "Service",
-        "@id": "https://thebestjob.org/#service-italy",
-        "name": "Espansione in Italia",
-        "serviceType": "Market entry consulting",
-        "provider": {"@id": "https://thebestjob.org/#organization"},
-        "areaServed": {"@type": "Country", "name": "Italy"},
-        "audience": {"@type": "BusinessAudience", "audienceType": "Polish companies"},
-        "description": "Consulenza strategica e supporto operativo per aziende polacche che vogliono entrare nel mercato italiano."
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 52.2297,
+        "longitude": 21.0122
       },
-      {
-        "@type": "Service",
-        "@id": "https://thebestjob.org/#service-digital",
-        "name": "Digitale e intelligenza artificiale",
-        "serviceType": "Digital transformation and AI solutions",
-        "provider": {"@id": "https://thebestjob.org/#organization"},
-        "areaServed": ["PL", "IT"],
-        "description": "Automazione processi, CRM, codici QR intelligenti, sistemi tipo Shazam, price scraper e assistenti intelligenti per PMI."
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Poland"
+        },
+        {
+          "@type": "Country",
+          "name": "Italy"
+        }
+      ],
+      "availableLanguage": [
+        "Italian",
+        "Polish",
+        "English"
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+48-788-403-091",
+          "contactType": "customer service",
+          "email": "info@thebestjob.org",
+          "availableLanguage": [
+            "Italian",
+            "Polish",
+            "English"
+          ],
+          "areaServed": [
+            "PL",
+            "IT"
+          ]
+        }
+      ],
+      "sameAs": [
+        "https://wa.me/48788403091"
+      ],
+      "knowsAbout": [
+        "Strategic consulting Italy-Poland",
+        "Startup support in Poland",
+        "Market entry Italy",
+        "Digital transformation",
+        "Artificial intelligence for SMEs",
+        "Process automation",
+        "CRM integration",
+        "Price monitoring"
+      ],
+      "priceRange": "$$",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://thebestjob.org/#website",
+      "url": "https://thebestjob.org",
+      "name": "The Best Job",
+      "description": "Consulenza strategica Italia–Polonia e soluzioni AI per imprese",
+      "publisher": {
+        "@id": "https://thebestjob.org/#organization"
       },
-      {
-        "@type": "FAQPage",
-        "@id": "https://thebestjob.org/#faq",
-        "url": "https://thebestjob.org/#faq",
-        "name": "FAQ — Supporto startup in Polonia, espansione in Italia, digitale e AI",
-        "description": "Domande frequenti per imprenditori italiani e polacchi su apertura azienda in Polonia, ingresso nel mercato italiano, trasformazione digitale e uso dell'intelligenza artificiale in PMI.",
-        "inLanguage": ["it", "pl", "en"],
-        "isPartOf": {"@id": "https://thebestjob.org/#website"},
-        "about": [
-          {"@type": "Thing", "name": "Supporto startup in Polonia"},
-          {"@type": "Thing", "name": "Espansione commerciale in Italia"},
-          {"@type": "Thing", "name": "Trasformazione digitale PMI"},
-          {"@type": "Thing", "name": "Intelligenza artificiale per aziende"}
-        ],
-        "publisher": {"@id": "https://thebestjob.org/#organization"},
-        "dateModified": "2026-09-16",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "@id": "https://thebestjob.org/#faq-q1",
-            "name": "Come si apre un'azienda in Polonia da imprenditore italiano?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Si sceglie la forma giuridica (spesso sp. z o.o.), si ottiene il NIP e si iscrive l'impresa al registro KRS. Servono sede legale, rappresentante e pratiche con gli enti locali. The Best Job (thebestjob.org, Varsavia) coordina un percorso chiavi in mano: sede, supporto amministrativo, consulenza di mercato e un unico referente in italiano, polacco o inglese.",
-              "inLanguage": "it",
-              "author": {"@id": "https://thebestjob.org/#organization"},
-              "dateCreated": "2026-09-16"
-            }
-          },
-          {
-            "@type": "Question",
-            "@id": "https://thebestjob.org/#faq-q2",
-            "name": "Cosa include il pacchetto di supporto startup di The Best Job in Polonia?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Il pacchetto include sede legale e sala riunioni, numero di telefono dedicato, supporto operativo e amministrativo, assistenza con enti e licenze, consulenza strategica per l'ingresso sul mercato, sito web e SEO di base. Tutto con un unico contratto e una fattura mensile, senza fornitori sparsi.",
-              "inLanguage": "it",
-              "author": {"@id": "https://thebestjob.org/#organization"}
-            }
-          },
-          {
-            "@type": "Question",
-            "@id": "https://thebestjob.org/#faq-q3",
-            "name": "Quanto costa e come funziona il contratto unico per startup in Polonia?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Il modello è prevedibile: un solo contratto e una fattura mensile che raggruppa i servizi del pacchetto. Il preventivo si adatta a dimensione e obiettivi dell'azienda. L'obiettivo è sapere in anticipo cosa si paga e cosa è incluso.",
-              "inLanguage": "it",
-              "author": {"@id": "https://thebestjob.org/#organization"}
-            }
-          },
-          {
-            "@type": "Question",
-            "@id": "https://thebestjob.org/#faq-q4",
-            "name": "Devo parlare polacco per avviare un'attività in Polonia?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. The Best Job opera in italiano, polacco e inglese. L'imprenditore parla con un referente nella propria lingua; il team gestisce interlocutori locali, documenti e pratiche. È pensato per imprenditori italiani che non vogliono dipendere solo da traduttori esterni.",
-              "inLanguage": "it",
-              "author": {"@id": "https://thebestjob.org/#organization"}
-            }
-          },
-          {
-            "@type": "Question",
-            "@id": "https://thebestjob.org/#faq-q5",
-            "name": "In quanto tempo si può partire con una startup in Polonia?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Con sede e pratiche base spesso in poche settimane. I settori regolamentati richiedono più tempo. The Best Job condivide una timeline realistica al primo colloquio, prima della firma del contratto.",
-              "inLanguage": "it",
-              "author": {"@id": "https://thebestjob.org/#organization"}
-            }
-          },
-          {
-            "@type": "Question",
-            "@id": "https://thebestjob.org/#faq-q6",
-            "name": "Come può un'azienda polacca entrare nel mercato italiano?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Serve analisi di mercato e posizionamento, scelta del modello (sede, rete commerciale o partnership), supporto legale e fiscale e network sul territorio italiano. The Best Job offre consulenza strategica bidirezionale Italia–Polonia con un unico referente che conosce entrambi i mercati.",
-              "inLanguage": "it",
-              "author": {"@id": "https://thebestjob.org/#organization"}
-            }
-          },
-          {
-            "@type": "Question",
-            "@id": "https://thebestjob.org/#faq-q7",
-            "name": "Cosa include il supporto all'espansione in Italia di The Best Job?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Analisi di mercato e posizionamento, supporto all'apertura di sede o rete commerciale, consulenza legale, fiscale e amministrativa, accompagnamento strategico bidirezionale, contatti e network in Italia, pacchetti chiavi in mano con un solo interlocutore.",
-              "inLanguage": "it",
-              "author": {"@id": "https://thebestjob.org/#organization"}
-            }
-          },
-          {
-            "@type": "Question",
-            "@id": "https://thebestjob.org/#faq-q8",
-            "name": "Perché non gestire da soli l'ingresso di un'azienda polacca in Italia?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Burocrazia, fiscalità e dinamiche commerciali italiane differiscono da quelle polacche. Senza un partner locale si rischiano ritardi, costi nascosti e errori di posizionamento. Un accompagnamento strutturato riduce gli errori e accelera i primi risultati.",
-              "inLanguage": "it",
-              "author": {"@id": "https://thebestjob.org/#organization"}
-            }
-          },
-          {
-            "@type": "Question",
-            "@id": "https://thebestjob.org/#faq-q9",
-            "name": "Serve subito una sede fisica in Italia per esportare o vendere?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Non sempre. Molte aziende partono con rete commerciale, agent o partnership e aprono la sede quando i volumi lo giustificano. The Best Job valuta con il cliente il modello più adatto a prodotto, canale e budget, evitando costi fissi prematuri.",
-              "inLanguage": "it",
-              "author": {"@id": "https://thebestjob.org/#organization"}
-            }
-          },
-          {
-            "@type": "Question",
-            "@id": "https://thebestjob.org/#faq-q10",
-            "name": "In che lingua si lavora per l'espansione in Italia e chi è il referente?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The Best Job lavora in polacco, italiano e inglese. Il cliente ha un unico referente che coordina strategia, aspetti operativi e interlocutori in Italia, senza dover gestire dieci fornitori diversi.",
-              "inLanguage": "it",
-              "author": {"@id": "https://thebestjob.org/#organization"}
-            }
-          },
-          {
-            "@type": "Question",
-            "@id": "https://thebestjob.org/#faq-q11",
-            "name": "Cos'è la trasformazione digitale delle aziende?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "È l'uso concreto di strumenti digitali e, dove utile, di intelligenza artificiale per semplificare processi, ridurre lavoro ripetitivo e avere dati chiari su clienti, ordini e magazzino. Non significa spostare tutto sul cloud: significa scegliere pochi strumenti utili (siti e app, QR intelligenti, CRM, automazioni, assistenti) e collegarli a ciò che l'azienda già usa.",
-              "inLanguage": "it",
-              "author": {"@id": "https://thebestjob.org/#organization"}
-            }
-          },
-          {
-            "@type": "Question",
-            "@id": "https://thebestjob.org/#faq-q12",
-            "name": "Perché è importante la trasformazione digitale per una PMI?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Perché si recuperano ore ogni settimana, si riducono errori di copiatura e carta, e si vede l'azienda in un colpo solo invece di aspettare il report di fine mese. L'AI non decide al posto dell'imprenditore: propone, ordina e avvisa. La decisione resta all'azienda. È particolarmente utile dove il titolare fa ancora troppe attività a mano.",
-              "inLanguage": "it",
-              "author": {"@id": "https://thebestjob.org/#organization"}
-            }
-          },
-          {
-            "@type": "Question",
-            "@id": "https://thebestjob.org/#faq-q13",
-            "name": "Come migliorare processo produttivo e organizzazione aziendale con soluzioni digitali e AI?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Esempi concreti offerti da The Best Job: codici QR intelligenti e sistemi tipo Shazam per riconoscere prodotti e ubicazioni in magazzino; integrazione CRM e automazione per clienti, ordini, email e documenti; price scraper per monitorare i prezzi dei competitor in tempo reale; assistenti intelligenti per le domande ripetitive dei clienti anche di notte; siti web e app chiare su computer e smartphone. Si parte dal processo più doloroso e si automatizza quello, non tutto insieme.",
-              "inLanguage": "it",
-              "author": {"@id": "https://thebestjob.org/#organization"}
-            }
-          },
-          {
-            "@type": "Question",
-            "@id": "https://thebestjob.org/#faq-q14",
-            "name": "L'intelligenza artificiale sostituisce le persone in azienda?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. Nelle soluzioni di The Best Job l'AI gestisce compiti ripetitivi (email standard, lettura documenti, ricerca pezzi, risposte FAQ). Il team torna al lavoro che richiede giudizio, relazioni e decisioni. L'AI non assume, non licenzia e non firma: propone e avvisa. La decisione resta all'imprenditore.",
-              "inLanguage": "it",
-              "author": {"@id": "https://thebestjob.org/#organization"}
-            }
-          },
-          {
-            "@type": "Question",
-            "@id": "https://thebestjob.org/#faq-q15",
-            "name": "Da dove si inizia la digitalizzazione in una piccola o media impresa?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Si mappa dove si perde più tempo (ufficio, fatture, magazzino, assistenza clienti). Poi si scelgono uno o due strumenti ad alto impatto — ad esempio QR in magazzino o un assistente per le domande ripetute — si collegano ai software già in uso e si misurano le ore recuperate. The Best Job propone un percorso a step, spiegato in linguaggio semplice, senza cambiare tutto in una notte. Sede: Varsavia; contatti: info@thebestjob.org, +48 788 403 091.",
-              "inLanguage": "it",
-              "author": {"@id": "https://thebestjob.org/#organization"}
+      "inLanguage": [
+        "it",
+        "pl",
+        "en"
+      ],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://thebestjob.org/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://thebestjob.org/#service-poland",
+      "name": "Supporto startup in Polonia",
+      "serviceType": "Business consulting and market entry",
+      "provider": {
+        "@id": "https://thebestjob.org/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Poland"
+      },
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Italian companies"
+      },
+      "description": "Pacchetto chiavi in mano per aprire e far crescere un'attività in Polonia: sede, supporto amministrativo, consulenza strategica e digitale."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://thebestjob.org/#service-italy",
+      "name": "Espansione in Italia",
+      "serviceType": "Market entry consulting",
+      "provider": {
+        "@id": "https://thebestjob.org/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Italy"
+      },
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Polish companies"
+      },
+      "description": "Consulenza strategica e supporto operativo per aziende polacche che vogliono entrare nel mercato italiano."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://thebestjob.org/#service-digital",
+      "name": "Digitale e intelligenza artificiale",
+      "serviceType": "Digital transformation and AI solutions",
+      "provider": {
+        "@id": "https://thebestjob.org/#organization"
+      },
+      "areaServed": [
+        "PL",
+        "IT"
+      ],
+      "description": "Automazione processi, CRM, codici QR intelligenti, sistemi tipo Shazam, price scraper e assistenti intelligenti per PMI."
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://thebestjob.org/#faq",
+      "url": "https://thebestjob.org/#faq",
+      "name": "FAQ — Supporto startup in Polonia, espansione in Italia, digitale e AI",
+      "description": "Domande frequenti per imprenditori italiani e polacchi su apertura azienda in Polonia, ingresso nel mercato italiano, trasformazione digitale e uso dell'intelligenza artificiale in PMI.",
+      "inLanguage": [
+        "it",
+        "pl",
+        "en"
+      ],
+      "isPartOf": {
+        "@id": "https://thebestjob.org/#website"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Supporto startup in Polonia"
+        },
+        {
+          "@type": "Thing",
+          "name": "Espansione commerciale in Italia"
+        },
+        {
+          "@type": "Thing",
+          "name": "Trasformazione digitale PMI"
+        },
+        {
+          "@type": "Thing",
+          "name": "Intelligenza artificiale per aziende"
+        }
+      ],
+      "publisher": {
+        "@id": "https://thebestjob.org/#organization"
+      },
+      "dateModified": "2026-09-16",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "@id": "https://thebestjob.org/#faq-q1",
+          "name": "Come si apre un'azienda in Polonia da imprenditore italiano?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Si sceglie la forma giuridica (spesso sp. z o.o.), si ottiene il NIP e si iscrive l'impresa al registro KRS. Servono sede legale, rappresentante e pratiche con gli enti locali. The Best Job (thebestjob.org, Varsavia) coordina un percorso chiavi in mano: sede, supporto amministrativo, consulenza di mercato e un unico referente in italiano, polacco o inglese.",
+            "inLanguage": "it",
+            "author": {
+              "@id": "https://thebestjob.org/#organization"
+            },
+            "dateCreated": "2026-09-16"
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://thebestjob.org/#faq-q2",
+          "name": "Cosa include il pacchetto di supporto startup di The Best Job in Polonia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Il pacchetto include sede legale e sala riunioni, numero di telefono dedicato, supporto operativo e amministrativo, assistenza con enti e licenze, consulenza strategica per l'ingresso sul mercato, sito web e SEO di base. Tutto con un unico contratto e una fattura mensile, senza fornitori sparsi.",
+            "inLanguage": "it",
+            "author": {
+              "@id": "https://thebestjob.org/#organization"
             }
           }
-        ]
-      }
-    ]
-  }
-  </script>
+        },
+        {
+          "@type": "Question",
+          "@id": "https://thebestjob.org/#faq-q3",
+          "name": "Quanto costa e come funziona il contratto unico per startup in Polonia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Il modello è prevedibile: un solo contratto e una fattura mensile che raggruppa i servizi del pacchetto. Il preventivo si adatta a dimensione e obiettivi dell'azienda. L'obiettivo è sapere in anticipo cosa si paga e cosa è incluso.",
+            "inLanguage": "it",
+            "author": {
+              "@id": "https://thebestjob.org/#organization"
+            }
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://thebestjob.org/#faq-q4",
+          "name": "Devo parlare polacco per avviare un'attività in Polonia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The Best Job opera in italiano, polacco e inglese. L'imprenditore parla con un referente nella propria lingua; il team gestisce interlocutori locali, documenti e pratiche. È pensato per imprenditori italiani che non vogliono dipendere solo da traduttori esterni.",
+            "inLanguage": "it",
+            "author": {
+              "@id": "https://thebestjob.org/#organization"
+            }
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://thebestjob.org/#faq-q5",
+          "name": "In quanto tempo si può partire con una startup in Polonia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Con sede e pratiche base spesso in poche settimane. I settori regolamentati richiedono più tempo. The Best Job condivide una timeline realistica al primo colloquio, prima della firma del contratto.",
+            "inLanguage": "it",
+            "author": {
+              "@id": "https://thebestjob.org/#organization"
+            }
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://thebestjob.org/#faq-q6",
+          "name": "Come può un'azienda polacca entrare nel mercato italiano?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Serve analisi di mercato e posizionamento, scelta del modello (sede, rete commerciale o partnership), supporto legale e fiscale e network sul territorio italiano. The Best Job offre consulenza strategica bidirezionale Italia–Polonia con un unico referente che conosce entrambi i mercati.",
+            "inLanguage": "it",
+            "author": {
+              "@id": "https://thebestjob.org/#organization"
+            }
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://thebestjob.org/#faq-q7",
+          "name": "Cosa include il supporto all'espansione in Italia di The Best Job?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Analisi di mercato e posizionamento, supporto all'apertura di sede o rete commerciale, consulenza legale, fiscale e amministrativa, accompagnamento strategico bidirezionale, contatti e network in Italia, pacchetti chiavi in mano con un solo interlocutore.",
+            "inLanguage": "it",
+            "author": {
+              "@id": "https://thebestjob.org/#organization"
+            }
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://thebestjob.org/#faq-q8",
+          "name": "Perché non gestire da soli l'ingresso di un'azienda polacca in Italia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Burocrazia, fiscalità e dinamiche commerciali italiane differiscono da quelle polacche. Senza un partner locale si rischiano ritardi, costi nascosti e errori di posizionamento. Un accompagnamento strutturato riduce gli errori e accelera i primi risultati.",
+            "inLanguage": "it",
+            "author": {
+              "@id": "https://thebestjob.org/#organization"
+            }
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://thebestjob.org/#faq-q9",
+          "name": "Serve subito una sede fisica in Italia per esportare o vendere?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non sempre. Molte aziende partono con rete commerciale, agent o partnership e aprono la sede quando i volumi lo giustificano. The Best Job valuta con il cliente il modello più adatto a prodotto, canale e budget, evitando costi fissi prematuri.",
+            "inLanguage": "it",
+            "author": {
+              "@id": "https://thebestjob.org/#organization"
+            }
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://thebestjob.org/#faq-q10",
+          "name": "In che lingua si lavora per l'espansione in Italia e chi è il referente?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Best Job lavora in polacco, italiano e inglese. Il cliente ha un unico referente che coordina strategia, aspetti operativi e interlocutori in Italia, senza dover gestire dieci fornitori diversi.",
+            "inLanguage": "it",
+            "author": {
+              "@id": "https://thebestjob.org/#organization"
+            }
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://thebestjob.org/#faq-q11",
+          "name": "Cos'è la trasformazione digitale delle aziende?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "È l'uso concreto di strumenti digitali e, dove utile, di intelligenza artificiale per semplificare processi, ridurre lavoro ripetitivo e avere dati chiari su clienti, ordini e magazzino. Non significa spostare tutto sul cloud: significa scegliere pochi strumenti utili (siti e app, QR intelligenti, CRM, automazioni, assistenti) e collegarli a ciò che l'azienda già usa.",
+            "inLanguage": "it",
+            "author": {
+              "@id": "https://thebestjob.org/#organization"
+            }
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://thebestjob.org/#faq-q12",
+          "name": "Perché è importante la trasformazione digitale per una PMI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Perché si recuperano ore ogni settimana, si riducono errori di copiatura e carta, e si vede l'azienda in un colpo solo invece di aspettare il report di fine mese. L'AI non decide al posto dell'imprenditore: propone, ordina e avvisa. La decisione resta all'azienda. È particolarmente utile dove il titolare fa ancora troppe attività a mano.",
+            "inLanguage": "it",
+            "author": {
+              "@id": "https://thebestjob.org/#organization"
+            }
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://thebestjob.org/#faq-q13",
+          "name": "Come migliorare processo produttivo e organizzazione aziendale con soluzioni digitali e AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Esempi concreti offerti da The Best Job: codici QR intelligenti e sistemi tipo Shazam per riconoscere prodotti e ubicazioni in magazzino; integrazione CRM e automazione per clienti, ordini, email e documenti; price scraper per monitorare i prezzi dei competitor in tempo reale; assistenti intelligenti per le domande ripetitive dei clienti anche di notte; siti web e app chiare su computer e smartphone. Si parte dal processo più doloroso e si automatizza quello, non tutto insieme.",
+            "inLanguage": "it",
+            "author": {
+              "@id": "https://thebestjob.org/#organization"
+            }
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://thebestjob.org/#faq-q14",
+          "name": "L'intelligenza artificiale sostituisce le persone in azienda?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Nelle soluzioni di The Best Job l'AI gestisce compiti ripetitivi (email standard, lettura documenti, ricerca pezzi, risposte FAQ). Il team torna al lavoro che richiede giudizio, relazioni e decisioni. L'AI non assume, non licenzia e non firma: propone e avvisa. La decisione resta all'imprenditore.",
+            "inLanguage": "it",
+            "author": {
+              "@id": "https://thebestjob.org/#organization"
+            }
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://thebestjob.org/#faq-q15",
+          "name": "Da dove si inizia la digitalizzazione in una piccola o media impresa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Si mappa dove si perde più tempo (ufficio, fatture, magazzino, assistenza clienti). Poi si scelgono uno o due strumenti ad alto impatto — ad esempio QR in magazzino o un assistente per le domande ripetute — si collegano ai software già in uso e si misurano le ore recuperate. The Best Job propone un percorso a step, spiegato in linguaggio semplice, senza cambiare tutto in una notte. Sede: Varsavia; contatti: info@thebestjob.org, +48 788 403 091.",
+            "inLanguage": "it",
+            "author": {
+              "@id": "https://thebestjob.org/#organization"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
