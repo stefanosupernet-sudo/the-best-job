@@ -211,4 +211,10 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://thebestjob.org/en/privacy/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thebestjob.org/privacy/"/>
   </url>
+  <url>
+    <loc>https://thebestjob.org/faq-startup-polonia/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
 </urlset>
