@@ -201,5 +201,132 @@
       <p>Partner strategico per aziende italiane e polacche — Varsavia.</p>
     </footer>
   </div>
+
+<!-- TBJ_COOKIE_CONSENT -->
+<style id="tbj-cookie-css">
+#tbj-cookie-banner{position:fixed;left:0;right:0;bottom:0;z-index:99999;background:#0f172a;color:#e2e8f0;padding:16px 18px;box-shadow:0 -8px 32px rgba(0,0,0,.25);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-size:14px;line-height:1.5}
+#tbj-cookie-banner[hidden]{display:none!important}
+#tbj-cookie-banner .tbj-c-inner{max-width:960px;margin:0 auto;display:flex;flex-wrap:wrap;gap:14px;align-items:flex-start;justify-content:space-between}
+#tbj-cookie-banner h2{font-size:1rem;margin:0 0 6px;color:#fff}
+#tbj-cookie-banner p{margin:0;color:#cbd5e1;max-width:52rem}
+#tbj-cookie-banner a{color:#38bdf8;text-decoration:underline}
+#tbj-cookie-banner .tbj-c-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+#tbj-cookie-banner button{border:0;border-radius:999px;padding:10px 16px;font-weight:600;font-size:.85rem;cursor:pointer}
+#tbj-cookie-banner .tbj-c-accept{background:#0e9bb8;color:#fff}
+#tbj-cookie-banner .tbj-c-reject{background:transparent;color:#e2e8f0;border:1px solid #64748b}
+#tbj-cookie-banner .tbj-c-custom{background:#1e293b;color:#e2e8f0}
+#tbj-cookie-panel{display:none;width:100%;margin-top:12px;padding-top:12px;border-top:1px solid #334155}
+#tbj-cookie-panel.open{display:block}
+#tbj-cookie-panel label{display:flex;gap:10px;align-items:flex-start;margin:8px 0;color:#e2e8f0}
+#tbj-cookie-panel label span{display:block;font-size:.8rem;color:#94a3b8;font-weight:400}
+#tbj-cookie-panel input{margin-top:3px}
+#tbj-cookie-reopen{position:fixed;left:12px;bottom:12px;z-index:99998;background:#312e81;color:#fff;border:0;border-radius:999px;padding:8px 14px;font-size:.75rem;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.2);display:none}
+#tbj-cookie-reopen.show{display:inline-block}
+@media(max-width:600px){#tbj-cookie-banner .tbj-c-actions{width:100%} #tbj-cookie-banner button{flex:1}}
+</style>
+<div id="tbj-cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie use" hidden>
+  <div class="tbj-c-inner">
+    <div>
+      <h2>Cookie use</h2>
+      <p>We use essential cookies required for the site to work. With your active consent we may also use analytics cookies to improve content. We do not run third-party ad profiling without your OK. <a href="/en/privacy/">Privacy policy</a>.</p>
+    </div>
+    <div class="tbj-c-actions">
+      <button type="button" class="tbj-c-accept" id="tbj-c-accept">Accept all</button>
+      <button type="button" class="tbj-c-reject" id="tbj-c-reject">Essential only</button>
+      <button type="button" class="tbj-c-custom" id="tbj-c-custom">Customize</button>
+    </div>
+    <div id="tbj-cookie-panel">
+      <label><input type="checkbox" checked disabled> <div><strong>Essential</strong><span>Always on: security, language, essential preferences.</span></div></label>
+      <label><input type="checkbox" id="tbj-c-analytics"> <div><strong>Analytics</strong><span>Help us understand how the site is used (anonymous or aggregated).</span></div></label>
+      <label><input type="checkbox" id="tbj-c-marketing"> <div><strong>Marketing</strong><span>Optional campaigns or ad measurement (off by default).</span></div></label>
+      <div class="tbj-c-actions" style="margin-top:10px">
+        <button type="button" class="tbj-c-accept" id="tbj-c-save">Save preferences</button>
+      </div>
+    </div>
+  </div>
+</div>
+<button type="button" id="tbj-cookie-reopen" aria-label="Cookie use">Cookie use</button>
+<script id="tbj-cookie-js">
+(function(){
+  var KEY = 'tbj_cookie_consent_v1';
+  var banner = document.getElementById('tbj-cookie-banner');
+  var panel = document.getElementById('tbj-cookie-panel');
+  var reopen = document.getElementById('tbj-cookie-reopen');
+  if (!banner) return;
+
+  function read() {
+    try { return JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) { return null; }
+  }
+  function write(c) {
+    c = c || {};
+    c.necessary = true;
+    c.ts = Date.now();
+    localStorage.setItem(KEY, JSON.stringify(c));
+    window.tbjConsent = c;
+    try {
+      document.cookie = 'tbj_consent=' + encodeURIComponent(c.analytics ? 'all' : 'essential') + ';path=/;max-age=31536000;SameSite=Lax';
+    } catch (e) {}
+    document.dispatchEvent(new CustomEvent('tbj-consent-updated', { detail: c }));
+  }
+  function apply(c) {
+    window.tbjConsent = c;
+    // Hook for future analytics: only load if c.analytics === true
+    if (c && c.analytics && typeof window.tbjLoadAnalytics === 'function') {
+      try { window.tbjLoadAnalytics(); } catch (e) {}
+    }
+  }
+  function hide() {
+    banner.hidden = true;
+    if (reopen) reopen.classList.add('show');
+  }
+  function show() {
+    banner.hidden = false;
+    if (reopen) reopen.classList.remove('show');
+  }
+
+  var existing = read();
+  if (existing && existing.necessary) {
+    apply(existing);
+    hide();
+  } else {
+    // Active consent: do NOT enable analytics until choice
+    window.tbjConsent = { necessary: true, analytics: false, marketing: false };
+    show();
+  }
+
+  document.getElementById('tbj-c-accept').addEventListener('click', function() {
+    write({ necessary: true, analytics: true, marketing: true });
+    apply(read());
+    hide();
+  });
+  document.getElementById('tbj-c-reject').addEventListener('click', function() {
+    write({ necessary: true, analytics: false, marketing: false });
+    apply(read());
+    hide();
+  });
+  document.getElementById('tbj-c-custom').addEventListener('click', function() {
+    panel.classList.toggle('open');
+  });
+  document.getElementById('tbj-c-save').addEventListener('click', function() {
+    write({
+      necessary: true,
+      analytics: !!document.getElementById('tbj-c-analytics').checked,
+      marketing: !!document.getElementById('tbj-c-marketing').checked
+    });
+    apply(read());
+    hide();
+  });
+  if (reopen) {
+    reopen.addEventListener('click', function() {
+      var c = read() || {};
+      document.getElementById('tbj-c-analytics').checked = !!c.analytics;
+      document.getElementById('tbj-c-marketing').checked = !!c.marketing;
+      panel.classList.add('open');
+      show();
+    });
+  }
+})();
+</script>
+
 </body>
 </html>
