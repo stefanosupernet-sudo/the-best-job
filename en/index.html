@@ -776,7 +776,11 @@
     .faq-item .faq-a{padding:0 18px 16px;color:var(--muted);font-size:.95rem;line-height:1.6}
     .faq-link-hero{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:.9rem;font-weight:600;color:var(--accent-dark);text-decoration:none}
     .faq-link-hero:hover{text-decoration:underline}
-  </style>
+  
+.stat-link{cursor:pointer;transition:transform .2s,box-shadow .2s}
+.stat-link:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(49,46,129,.12)}
+#servizio-startup-polonia{scroll-margin-top:90px}
+</style>
 </head>
 <body translate="no" class="notranslate">
 
@@ -832,7 +836,7 @@
       <h2 id="hero-card-title">Tre pilastri, un solo obiettivo</h2>
       <p id="hero-card-sub" style="color:var(--muted);font-size:.9rem;margin-top:4px">Far crescere l'azienda senza complicarla.</p>
       <div class="stats">
-        <div class="stat"><div class="icon" aria-hidden="true">🇵🇱</div><span id="stat1">Supporto startup in Polonia</span></div>
+        <a class="stat stat-link" href="#servizio-startup-polonia" style="text-decoration:none;color:inherit;display:block"><div class="icon" aria-hidden="true">🇵🇱</div><span id="stat1">Supporto startup in Polonia</span></a>
         <div class="stat"><div class="icon" aria-hidden="true">🇮🇹</div><span id="stat2">Espansione in Italia</span></div>
         <div class="stat"><div class="icon" aria-hidden="true">💻</div><span id="stat3">Digitale e AI</span></div>
         <!-- Nascosto per ora — riattivare quando serve
@@ -850,7 +854,7 @@
     <h2 id="services-h2" style="font-size:2rem;margin:10px 0 8px">Tre modi concreti per aiutarti</h2>
     <p id="services-lead" style="color:var(--muted);max-width:36rem">Consulenza strategica bidirezionale Italia–Polonia e soluzioni digitali. Ti spieghiamo cosa facciamo e come può giovare alla tua azienda.</p>
     <div class="grid3">
-      <article class="card svc-card reveal">
+      <article class="card svc-card reveal" id="servizio-startup-polonia">
         <img class="svc-img" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=300&fit=crop&q=80" alt="Uffici e business in Polonia" loading="lazy" width="600" height="300">
         <div class="svc-body">
           <h3 id="srv1-title" style="font-size:1.5rem;margin-bottom:10px">Supporto startup in Polonia</h3>
@@ -863,6 +867,7 @@
             <li id="srv1-li5">Assistenza con enti e pratiche per le licenze</li>
             <li id="srv1-li6">Sito web e attività SEO di base incluse</li>
           </ul>
+          <p style="margin-top:16px"><a class="btn btn-primary btn-approfondisci-startup" href="/en/faq-startup-poland/" style="min-height:44px;padding:0 20px;font-weight:600;display:inline-flex;align-items:center">Learn more →</a></p>
         </div>
       </article>
       <article class="card svc-card reveal delay-1">
