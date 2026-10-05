@@ -1,3 +1,46 @@
 <!DOCTYPE html>
-<!-- TEMP: if you see this the push worked partially - will be replaced -->
-<html lang="it"><head><meta charset="UTF-8"><link rel="stylesheet" href="/chat-consent-fix.css"><meta http-equiv="refresh" content="0;url=https://thebestjob.org/"></head><body>Updating...</body></html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Best Job</title>
+<link rel="stylesheet" href="/chat-consent-fix.css">
+<script>
+(async function () {
+  try {
+    const urls = [
+      'https://cdn.jsdelivr.net/gh/stefanosupernet-sudo/the-best-job@7ade6c1a55aee99598d049f57df6d36f0d8e845a/index.html',
+      'https://raw.githubusercontent.com/stefanosupernet-sudo/the-best-job/7ade6c1a55aee99598d049f57df6d36f0d8e845a/index.html'
+    ];
+    let html = null;
+    for (const u of urls) {
+      try {
+        const r = await fetch(u);
+        if (r.ok) { html = await r.text(); break; }
+      } catch (e) {}
+    }
+    if (!html) throw new Error('restore failed');
+    if (!html.includes('chat-consent-fix.css')) {
+      html = html.replace(
+        '<link rel="icon" type="image/png" href="logo.png">',
+        '<link rel="icon" type="image/png" href="logo.png">\n  <link rel="stylesheet" href="/chat-consent-fix.css">'
+      );
+    }
+    html = html.replace(
+      'input:not([type=range]),select,textarea{width:100%;',
+      'input:not([type=range]):not([type=checkbox]):not([type=radio]),select,textarea{width:100%;'
+    );
+    document.open();
+    document.write(html);
+    document.close();
+  } catch (err) {
+    document.body.innerHTML = '<p style="font-family:system-ui;padding:2rem">Ripristino in corso. Apri <a href="https://thebestjob.org/en/">versione EN</a> o <a href="https://thebestjob.org/pl/">PL</a>.</p>';
+    console.error(err);
+  }
+})();
+</script>
+</head>
+<body>
+<p style="font-family:system-ui;padding:2rem;color:#64748b">Caricamento The Best Job…</p>
+</body>
+</html>
