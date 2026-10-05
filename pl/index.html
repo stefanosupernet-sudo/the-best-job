@@ -580,7 +580,11 @@
     .contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:40px}
     form{background:var(--bg);border:1px solid var(--border);border-radius:18px;padding:28px}
     label{display:block;font-size:.9rem;font-weight:600;margin-top:12px}
-    input:not([type=range]),select,textarea{width:100%;margin-top:6px;padding:12px 14px;border-radius:10px;border:1px solid var(--border);font:inherit;background:#fff}
+    input:not([type=range]):not([type=checkbox]):not([type=radio]),select,textarea{width:100%;margin-top:6px;padding:12px 14px;border-radius:10px;border:1px solid var(--border);font:inherit;background:#fff}
+    .chat-consent{display:flex!important;flex-direction:row!important;align-items:flex-start;gap:10px;padding:10px 14px 6px;font-size:.75rem;color:var(--muted);line-height:1.45;cursor:pointer;width:100%;box-sizing:border-box}
+    .chat-consent input[type=checkbox]{width:auto!important;min-width:16px;max-width:18px;height:16px;margin:3px 0 0!important;padding:0!important;flex-shrink:0;accent-color:var(--primary)}
+    .chat-consent span,#chat-consent-label{flex:1 1 auto;min-width:0;max-width:100%;display:block;white-space:normal;word-wrap:break-word;overflow-wrap:anywhere}
+    #chat-privacy-note{padding:0 14px 12px!important;font-size:.7rem;color:var(--muted);line-height:1.4;margin:0}
     .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
     .contact-item{display:flex;gap:14px;margin:16px 0;align-items:flex-start}
     .contact-icon{width:40px;height:40px;border-radius:10px;background:#eef0fa;color:var(--primary);display:grid;place-items:center;flex-shrink:0;font-size:1.1rem}
@@ -1223,7 +1227,7 @@
       <a id="footer-nav-solutions" href="#soluzioni">Soluzioni digitali</a>
       <a id="footer-about" href="#chi-siamo">Chi siamo</a>
       <a id="footer-faq" href="#faq">FAQ</a>
-        <a id="footer-privacy" href="/privacy/">Privacy / GDPR</a>
+        <a id="footer-privacy" href="/pl/polityka-prywatnosci/">Polityka prywatności / RODO</a>
     </div>
     <div>
       <h4 id="footer-contacts">Contatti</h4>
@@ -1266,7 +1270,7 @@ var LANG = {
     "hero-cta1": "Richiedi un preventivo", "hero-cta2": "Chiama ora",
     "hero-faq-link": "Domande frequenti sui 3 pilastri →",
     "nav-faq": "FAQ", "mnav-faq": "FAQ", "footer-faq": "FAQ",
-    "footer-privacy": "Privacy / GDPR",
+    "footer-privacy": "Polityka prywatności / RODO",
     "faq-kicker": "FAQ",
     "faq-h2": "Domande frequenti sui tre pilastri",
     "faq-lead": "Risposte chiare per imprenditori che vogliono aprire in Polonia, entrare in Italia o digitalizzare l'azienda con l'AI. Pensa a queste FAQ come a una guida pratica.",
@@ -1406,7 +1410,7 @@ var LANG = {
     "hero-cta1": "Zapytaj o ofertę", "hero-cta2": "Zadzwoń teraz",
     "hero-faq-link": "Częste pytania o 3 filarach →",
     "nav-faq": "FAQ", "mnav-faq": "FAQ", "footer-faq": "FAQ",
-    "footer-privacy": "Privacy / RODO",
+    "footer-privacy": "Polityka prywatności / RODO",
     "faq-kicker": "FAQ",
     "faq-h2": "Częste pytania o trzech filarach",
     "faq-lead": "Jasne odpowiedzi dla przedsiębiorców, którzy chcą otworzyć firmę w Polsce, wejść do Włoch lub cyfryzować firmę z AI.",
@@ -1547,7 +1551,7 @@ var LANG = {
 
     "hero-faq-link": "FAQ on the 3 pillars →",
     "nav-faq": "FAQ", "mnav-faq": "FAQ", "footer-faq": "FAQ",
-    "footer-privacy": "Privacy / GDPR",
+    "footer-privacy": "Polityka prywatności / RODO",
     "faq-kicker": "FAQ",
     "faq-h2": "Frequently asked questions on the three pillars",
     "faq-lead": "Clear answers for entrepreneurs who want to start in Poland, enter Italy, or digitalise the company with AI. Treat this FAQ as a practical guide.",
