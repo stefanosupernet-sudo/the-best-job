@@ -1,1 +1,33 @@
-@/home/workdir/artifacts/index.html
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Best Job | Consulenza Italia–Polonia e AI</title>
+<link rel="stylesheet" href="/chat-consent-fix.css">
+<script>
+(async function () {
+  try {
+    const urls = [
+      'https://cdn.jsdelivr.net/gh/stefanosupernet-sudo/the-best-job@04c7e3adae5d09297cdc0eb5dbdbe89a49c76d2e/index.html',
+      'https://raw.githubusercontent.com/stefanosupernet-sudo/the-best-job/04c7e3adae5d09297cdc0eb5dbdbe89a49c76d2e/index.html'
+    ];
+    let html = null;
+    for (const u of urls) {
+      try { const r = await fetch(u); if (r.ok) { html = await r.text(); break; } } catch (e) {}
+    }
+    if (!html) throw new Error('restore failed');
+    if (!html.includes('chat-consent-fix.css')) {
+      html = html.replace('<link rel="icon" type="image/png" href="logo.png">','<link rel="icon" type="image/png" href="logo.png">\n  <link rel="stylesheet" href="/chat-consent-fix.css">');
+    }
+    html = html.replace('input:not([type=range]),select,textarea{width:100%;','input:not([type=range]):not([type=checkbox]):not([type=radio]),select,textarea{width:100%;');
+    document.open(); document.write(html); document.close();
+  } catch (err) {
+    document.body.innerHTML = '<p style="font-family:system-ui;padding:2rem">Ripristino… <a href="/en/">EN</a> · <a href="/pl/">PL</a></p>';
+    console.error(err);
+  }
+})();
+</script>
+</head>
+<body><p style="font-family:system-ui;padding:2rem;color:#64748b">Caricamento The Best Job…</p></body>
+</html>
