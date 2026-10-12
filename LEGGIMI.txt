@@ -1,0 +1,23 @@
+# Aggiornamento GitHub — The Best Job
+
+## Contenuto dello zip
+
+| File | Azione su GitHub |
+|------|------------------|
+| index.html | Sostituire nella root del repo |
+| startup-polonia/index.html | Sostituire |
+| espansione-italia/index.html | Sostituire |
+| internazionalizzazione-polonia/index.html | Sostituire |
+| faq-startup-polonia/temporary-manager/index.html | Creare cartella se manca / sostituire |
+| faq-startup-polonia/index.html | Sostituire (se presente nello zip) |
+
+## Modifiche principali
+- Sezione **Espansione bidirezionale**: temporary manager + tono Berlusconi
+- Servizi startup / espansione Italia: temporary manager
+- Tono di voce: diretto, concreto, “voi/vi”, senza promesse vuote
+- FAQ Temporary Manager dedicate
+
+## Come caricare
+1. GitHub → repository the-best-job
+2. Per ogni file: percorso corrispondente → Replace file (o Upload)
+3. Commit message suggerito: "tone + temporary manager in espansione bidirezionale"
