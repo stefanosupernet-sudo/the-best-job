@@ -1,10 +1,14 @@
 User-agent: *
 Allow: /
 
-# Multilingual sitemap (IT default, PL /pl/, EN /en/)
+# Isola eventuali path storici di recruiting (fuori focus B2B)
+Disallow: /Job-offers/
+Disallow: /job-offers/
+Disallow: /Job-offers
+Disallow: /job-offers
+
 Sitemap: https://thebestjob.org/sitemap.xml
 
-# Optional AI crawlers
 User-agent: GPTBot
 Allow: /
 User-agent: ChatGPT-User
