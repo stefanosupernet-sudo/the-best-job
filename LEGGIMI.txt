@@ -1,6 +1,4 @@
-Multilingual deploy
-1. sitemap.xml -> root (replaces current)
-2. en/index.html, pl/index.html -> menus Services/AI
-3. en/services/*/index.html (10 pages)
-4. pl/uslugi/*/index.html (10 pages)
-Translations are pragmatic EN/PL business tone, not literal IT.
+Replace en/index.html and pl/index.html
+EN button -> /en/digital-ai/
+PL button -> /pl/cyfryzacja-ai/
+IT already online.
