@@ -1,6 +1,6 @@
-DEPLOY Impatto AI + soluzioni digitali
-1. servizi/*/index.html (5 pagine nuove)
-2. index.html (menu Impatto AI desktop+mobile, link sol cards, pulsante Approfondisci)
-3. intelligenza-artificiale-trasformazione-digitale-pmi/index.html (hub soluzioni)
-4. Aggiungere URL dello snippet alla sitemap.xml
-Le GIF devono restare in root del sito: qr_scan_orizzontale.gif, shazam_system_2sec.gif, price_scraping_dynamic.gif, assistente_bubble_lato.gif
+Multilingual deploy
+1. sitemap.xml -> root (replaces current)
+2. en/index.html, pl/index.html -> menus Services/AI
+3. en/services/*/index.html (10 pages)
+4. pl/uslugi/*/index.html (10 pages)
+Translations are pragmatic EN/PL business tone, not literal IT.

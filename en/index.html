@@ -476,6 +476,24 @@
     .logo span{color:var(--accent)}
     .logo span{color:var(--accent)}
     .nav-links{display:flex;gap:28px;align-items:center;list-style:none}
+    .nav-item{position:relative;list-style:none}
+    .nav-item>a{text-decoration:none;font-size:.9rem;font-weight:500;color:var(--muted);display:inline-flex;align-items:center;gap:4px}
+    .nav-item>a:hover,.nav-item>a[aria-expanded="true"]{color:var(--primary)}
+    .nav-item .chev{font-size:.65rem;opacity:.7}
+    .nav-item>.dropdown{display:none;position:absolute;top:100%;left:0;min-width:280px;background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:0 12px 32px rgba(15,23,42,.12);padding:8px;z-index:50;margin-top:8px}
+    .nav-item.open>.dropdown{display:block}
+    .dropdown a{display:block;padding:10px 12px;border-radius:8px;text-decoration:none;color:var(--fg);font-size:.88rem;font-weight:500}
+    .dropdown a:hover{background:#f1f5f9;color:var(--primary)}
+    .dropdown .sub{position:relative}
+    .dropdown .sub>a.sub-toggle::after{content:" ›";opacity:.5}
+    .dropdown-sub{display:none;position:absolute;left:100%;top:0;min-width:260px;background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:0 12px 32px rgba(15,23,42,.12);padding:8px;margin-left:4px}
+    .dropdown .sub.open>.dropdown-sub{display:block}
+    .mm-acc{border-bottom:1px solid var(--border)}
+    .mm-acc>button{width:100%;text-align:left;background:none;border:none;padding:12px;font:inherit;font-weight:600;cursor:pointer}
+    .mm-acc .mm-panel{display:none;padding:0 8px 10px 16px}
+    .mm-acc.open .mm-panel{display:block}
+    .mm-panel a{display:block;padding:8px 4px;text-decoration:none;color:var(--fg);font-size:.92rem}
+
     .nav-links a{text-decoration:none;font-size:.9rem;font-weight:500;color:var(--muted)}
     .nav-links a:hover{color:var(--primary)}
     .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;font-weight:600;font-size:.9rem;text-decoration:none;border:none;cursor:pointer;font-family:inherit;transition:.2s}
@@ -804,23 +822,78 @@
         <source type="image/webp" srcset="logo-header.webp 1x, logo-header@2x.webp 2x">
         <img src="logo-header.png" srcset="logo-header.png 1x, logo-header@2x.png 2x" alt="The Best Job" width="62" height="40" decoding="async" fetchpriority="high">
       </picture>The Best <span>Job</span></a>
-    <ul class="nav-links">
-      <li><a id="nav-services" href="#servizi">Servizi</a></li>
-      <li><a id="nav-ai" href="#impatto-ai">Impatto dell'AI</a></li>
-      <li><a id="nav-solutions" href="#soluzioni">Soluzioni</a></li>
-      <li><a id="nav-how" href="#come-funziona">Come funziona</a></li>
+        <ul class="nav-links">
+      <li class="nav-item">
+        <a id="nav-services" href="#servizi" aria-expanded="false" aria-haspopup="true">Services <span class="chev">▾</span></a>
+        <div class="dropdown" role="menu">
+          <div class="sub">
+            <a href="/en/poland-startup/" class="sub-toggle" data-sub-toggle="1">Poland market entry</a>
+            <div class="dropdown-sub">
+              <a href="/en/poland-startup/">Overview</a>
+              <a href="/en/services/legal-address-meeting-rooms-poland/">Legal address &amp; meeting rooms</a>
+              <a href="/en/services/operational-admin-support-poland/">Operational &amp; admin support</a>
+              <a href="/en/services/temporary-manager-poland/">Temporary manager</a>
+              <a href="/en/services/market-entry-strategy-poland/">Market-entry strategy</a>
+              <a href="/en/services/permits-licenses-poland/">Permits &amp; licences</a>
+              <a href="/sviluppo-siti-web-app-ai/">Websites &amp; SEO (case study)</a>
+            </div>
+          </div>
+          <a href="/en/italy-expansion/">Expand into Italy</a>
+          <a href="/en/digital-ai/">Digital &amp; AI</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a id="nav-ai" href="#impatto-ai" aria-expanded="false" aria-haspopup="true">AI impact <span class="chev">▾</span></a>
+        <div class="dropdown" role="menu">
+          <a href="/en/digital-ai/">Digital &amp; AI overview</a>
+          <a href="/sviluppo-siti-web-app-ai/">Websites &amp; apps</a>
+          <a href="/en/services/smart-qr-codes/">Smart QR codes</a>
+          <a href="/en/services/product-recognition-systems/">Product recognition</a>
+          <a href="/en/services/crm-process-automation/">CRM &amp; automation</a>
+          <a href="/en/services/price-scraper-competitor-monitoring/">Price scraper</a>
+          <a href="/en/services/business-ai-assistants/">AI assistants</a>
+          <a href="/en/faq-ai-digital-transformation/">FAQ Digital &amp; AI</a>
+        </div>
+      </li>
+      <li><a id="nav-solutions" href="#soluzioni">Solutions</a></li>
+      <li><a id="nav-how" href="#come-funziona">How it works</a></li>
       <li><a id="nav-faq" href="/en/#faq">FAQ</a></li>
-      <li><a id="nav-cta" class="btn btn-primary" style="min-height:42px" href="#contatti">Richiedi preventivo</a></li>
+      <li><a id="nav-cta" class="btn btn-primary" style="min-height:42px" href="/en/contact/">Get a quote</a></li>
     </ul>
     <button class="ham" onclick="document.getElementById('mm').classList.toggle('open')">☰</button>
   </div>
-  <div class="mobile-menu" id="mm">
-    <a id="mnav-services" href="#servizi" onclick="closeMM()">Servizi</a>
-    <a id="mnav-ai" href="#impatto-ai" onclick="closeMM()">Impatto dell'AI</a>
-    <a id="mnav-solutions" href="#soluzioni" onclick="closeMM()">Soluzioni</a>
-    <a id="mnav-how" href="#come-funziona" onclick="closeMM()">Come funziona</a>
-    <a id="mnav-faq" href="/en/#faq" onclick="closeMM()">FAQ</a>
-    <a id="mnav-cta" class="btn btn-primary" href="#contatti" onclick="closeMM()">Richiedi preventivo</a>
+    <div class="mobile-menu" id="mm">
+    <div class="mm-acc"><button type="button" onclick="this.parentElement.classList.toggle('open')">Services</button>
+      <div class="mm-panel">
+        <div class="mm-acc"><button type="button" onclick="this.parentElement.classList.toggle('open')">Poland market entry</button>
+          <div class="mm-panel">
+            <a href="/en/poland-startup/" onclick="closeMM()">Overview</a>
+            <a href="/en/services/legal-address-meeting-rooms-poland/" onclick="closeMM()">Legal address</a>
+            <a href="/en/services/operational-admin-support-poland/" onclick="closeMM()">Ops &amp; admin support</a>
+            <a href="/en/services/temporary-manager-poland/" onclick="closeMM()">Temporary manager</a>
+            <a href="/en/services/market-entry-strategy-poland/" onclick="closeMM()">Market-entry strategy</a>
+            <a href="/en/services/permits-licenses-poland/" onclick="closeMM()">Permits &amp; licences</a>
+          </div>
+        </div>
+        <a href="/en/italy-expansion/" onclick="closeMM()">Expand into Italy</a>
+        <a href="/en/digital-ai/" onclick="closeMM()">Digital &amp; AI</a>
+      </div>
+    </div>
+    <div class="mm-acc"><button type="button" onclick="this.parentElement.classList.toggle('open')">AI impact</button>
+      <div class="mm-panel">
+        <a href="/en/digital-ai/" onclick="closeMM()">Overview</a>
+        <a href="/en/services/smart-qr-codes/" onclick="closeMM()">Smart QR codes</a>
+        <a href="/en/services/product-recognition-systems/" onclick="closeMM()">Product recognition</a>
+        <a href="/en/services/crm-process-automation/" onclick="closeMM()">CRM &amp; automation</a>
+        <a href="/en/services/price-scraper-competitor-monitoring/" onclick="closeMM()">Price scraper</a>
+        <a href="/en/services/business-ai-assistants/" onclick="closeMM()">AI assistants</a>
+        <a href="/en/faq-ai-digital-transformation/" onclick="closeMM()">FAQ</a>
+      </div>
+    </div>
+    <a href="#soluzioni" onclick="closeMM()">Solutions</a>
+    <a href="#come-funziona" onclick="closeMM()">How it works</a>
+    <a href="/en/#faq" onclick="closeMM()">FAQ</a>
+    <a class="btn btn-primary" href="/en/contact/" onclick="closeMM()">Get a quote</a>
   </div>
 </header>
 
@@ -1988,7 +2061,38 @@ function setLang(l) {
   updateCalc();
 }
 
-function closeMM() { document.getElementById('mm').classList.remove('open'); }
+
+function closeMM(){var m=document.getElementById('mm');if(m)m.classList.remove('open');}
+(function(){
+  function closeAll(except){
+    document.querySelectorAll('.nav-links > .nav-item.open').forEach(function(li){
+      if(except&&li===except)return;
+      li.classList.remove('open');
+      var a=li.querySelector(':scope > a');if(a)a.setAttribute('aria-expanded','false');
+      li.querySelectorAll('.sub.open').forEach(function(s){s.classList.remove('open');});
+    });
+  }
+  document.querySelectorAll('.nav-links > .nav-item > a[aria-haspopup="true"]').forEach(function(trigger){
+    trigger.addEventListener('click',function(e){
+      e.preventDefault();e.stopPropagation();
+      var li=trigger.parentElement, open=!li.classList.contains('open');
+      closeAll(open?li:null);
+      if(open){li.classList.add('open');trigger.setAttribute('aria-expanded','true');}
+      else{li.classList.remove('open');trigger.setAttribute('aria-expanded','false');}
+    });
+  });
+  document.querySelectorAll('.dropdown .sub > a.sub-toggle').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();e.stopPropagation();
+      var sub=a.parentElement, will=!sub.classList.contains('open');
+      document.querySelectorAll('.dropdown .sub.open').forEach(function(s){if(s!==sub)s.classList.remove('open');});
+      if(will)sub.classList.add('open');else sub.classList.remove('open');
+    });
+  });
+  document.addEventListener('click',function(e){if(!e.target.closest('.nav-links'))closeAll(null);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeAll(null);});
+})();
+
 
 /* ─────────────────────────────────────────
    Calculator
