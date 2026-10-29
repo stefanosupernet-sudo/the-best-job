@@ -496,6 +496,26 @@
       .dropdown a{padding:10px 8px}
     }
     .mm-acc{border-bottom:1px solid var(--border)}
+
+    /* Mobile accordion: + / − to show submenu */
+    .mm-acc>button{
+      width:100%;text-align:left;background:none;border:none;padding:12px 4px;
+      font:inherit;font-weight:600;cursor:pointer;color:var(--fg);
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+    }
+    .mm-acc>button::after{
+      content:"+";
+      flex-shrink:0;
+      width:1.4rem;height:1.4rem;
+      display:inline-flex;align-items:center;justify-content:center;
+      font-weight:700;font-size:1.2rem;line-height:1;
+      color:var(--primary);
+      border:1px solid var(--border);
+      border-radius:6px;
+      background:#fff;
+    }
+    .mm-acc.open>button::after{content:"−";}
+
     .mm-acc>button{width:100%;text-align:left;background:none;border:none;padding:12px;font:inherit;font-weight:600;cursor:pointer;color:var(--fg)}
     .mm-acc .mm-panel{display:none;padding:0 8px 10px 16px}
     .mm-acc.open .mm-panel{display:block}
