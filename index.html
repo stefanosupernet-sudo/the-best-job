@@ -847,7 +847,19 @@
           <a href="/intelligenza-artificiale-trasformazione-digitale-pmi/">Digitale e intelligenza artificiale</a>
         </div>
       </li>
-      <li><a id="nav-ai" href="#impatto-ai">Impatto dell'AI</a></li>
+      <li class="nav-item">
+        <a id="nav-ai" href="#impatto-ai">Impatto dell'AI <span class="chev">▾</span></a>
+        <div class="dropdown" role="menu">
+          <a href="/intelligenza-artificiale-trasformazione-digitale-pmi/">Digitale e intelligenza artificiale (pilastro)</a>
+          <a href="/sviluppo-siti-web-app-ai/">Siti web e app</a>
+          <a href="/servizi/codici-qr-intelligenti/">Codici QR intelligenti</a>
+          <a href="/servizi/sistemi-riconoscimento-tipo-shazam/">Sistemi tipo Shazam</a>
+          <a href="/servizi/crm-e-automazione-processi/">CRM e automazione</a>
+          <a href="/servizi/price-scraper-monitoraggio-prezzi/">Price scraper</a>
+          <a href="/servizi/assistenti-intelligenti-aziende/">Assistenti intelligenti</a>
+          <a href="/faq-ai-trasformazione-digitale/">FAQ Digitale e AI</a>
+        </div>
+      </li>
       <li><a id="nav-solutions" href="#soluzioni">Soluzioni</a></li>
       <li><a id="nav-how" href="#come-funziona">Come funziona</a></li>
       <li><a id="nav-faq" href="/#faq">FAQ</a></li>
@@ -875,7 +887,20 @@
         <a href="/intelligenza-artificiale-trasformazione-digitale-pmi/" onclick="closeMM()">Digitale e intelligenza artificiale</a>
       </div>
     </div>
-    <a id="mnav-ai" href="#impatto-ai" onclick="closeMM()">Impatto dell'AI</a>
+    <div class="mm-acc">
+      <button type="button" onclick="this.parentElement.classList.toggle('open')">Impatto dell'AI</button>
+      <div class="mm-panel">
+        <a href="/intelligenza-artificiale-trasformazione-digitale-pmi/" onclick="closeMM()">Pilastro Digitale e AI</a>
+        <a href="/sviluppo-siti-web-app-ai/" onclick="closeMM()">Siti web e app</a>
+        <a href="/servizi/codici-qr-intelligenti/" onclick="closeMM()">Codici QR intelligenti</a>
+        <a href="/servizi/sistemi-riconoscimento-tipo-shazam/" onclick="closeMM()">Sistemi tipo Shazam</a>
+        <a href="/servizi/crm-e-automazione-processi/" onclick="closeMM()">CRM e automazione</a>
+        <a href="/servizi/price-scraper-monitoraggio-prezzi/" onclick="closeMM()">Price scraper</a>
+        <a href="/servizi/assistenti-intelligenti-aziende/" onclick="closeMM()">Assistenti intelligenti</a>
+        <a href="/faq-ai-trasformazione-digitale/" onclick="closeMM()">FAQ Digitale e AI</a>
+        <a href="#impatto-ai" onclick="closeMM()">Sezione in homepage</a>
+      </div>
+    </div>
     <a id="mnav-solutions" href="#soluzioni" onclick="closeMM()">Soluzioni</a>
     <a id="mnav-how" href="#come-funziona" onclick="closeMM()">Come funziona</a>
     <a id="mnav-faq" href="/#faq" onclick="closeMM()">FAQ</a>
@@ -1005,7 +1030,10 @@
       <article class="pillar reveal"><h3 id="p3-h">Costi</h3><p class="lead-s" id="p3-s">Meno straordinari e meno carta</p><p id="p3-p">Non serve una persona in più solo per smistare documenti. Si riducono telefonate perse e lavoro ripetuto.</p></article>
       <article class="pillar reveal"><h3 id="p4-h">Controllo</h3><p class="lead-s" id="p4-s">Vedi l'azienda in un colpo solo</p><p id="p4-p">Clienti, ordini e magazzino nello stesso posto. Non aspetti il report di fine mese.</p></article>
     </div>
-    <p style="margin:28px 0 8px"><a class="btn btn-primary btn-approfondisci-ai-impatto" href="/faq-ai-trasformazione-digitale/" style="min-height:44px;padding:0 20px;font-weight:600;display:inline-flex;align-items:center">Approfondisci FAQ Digitale e AI →</a></p>
+    <p style="margin:28px 0 8px;display:flex;flex-wrap:wrap;gap:12px">
+      <a class="btn btn-primary btn-approfondisci-ai-impatto" href="/intelligenza-artificiale-trasformazione-digitale-pmi/" style="min-height:44px;padding:0 20px;font-weight:600;display:inline-flex;align-items:center">Approfondisci — Digitale e AI →</a>
+      <a class="btn btn-ghost" href="/faq-ai-trasformazione-digitale/" style="min-height:44px;padding:0 20px;font-weight:600;display:inline-flex;align-items:center">FAQ Digitale e AI →</a>
+    </p>
     <h3 id="stories-title" style="margin-top:48px;font-size:1.5rem">Una giornata tipo, prima e dopo</h3>
     <div class="stories">
       <article class="story reveal"><h4 id="st1-h">Ufficio e clienti</h4><p class="lbl" id="lbl-before1">Oggi</p><p id="st1-before">La mattina si smistano email, si rispondono sempre le stesse domande e si cercano i documenti nei faldoni.</p><p class="lbl after" id="lbl-after1">Con l'AI</p><p id="st1-after">Le domande ripetute le gestisce un assistente. I documenti si trovano in un secondo.</p></article>
@@ -1050,23 +1078,23 @@
       </article>
       <article class="card sol-card reveal delay-1" data-gif="qr" data-gif-src="qr_scan_orizzontale.gif" data-gif-caption="Scan QR — Codici QR intelligenti per prodotti e cataloghi" role="button" tabindex="0" aria-label="Apri demo Codici QR intelligenti">
         <img class="sol-img sol-img-gif" src="qr_scan_orizzontale.gif" alt="Codici QR intelligenti — demo scansione QR" loading="lazy" width="500" height="250">
-        <div class="sol-body"><div class="ico">▣</div><h3 id="sol2-h">Codici QR intelligenti</h3><p id="sol2-p" style="color:var(--muted);margin-top:8px;font-size:.95rem">Per cataloghi, istruzioni, tracciamento prodotti. Semplici da usare. <span style="color:var(--accent-dark);font-weight:600">Clicca per ingrandire →</span></p></div>
+        <div class="sol-body"><div class="ico">▣</div><h3 id="sol2-h"><a href="/servizi/codici-qr-intelligenti/" style="color:inherit;text-decoration:none">Codici QR intelligenti</a></h3><p id="sol2-p" style="color:var(--muted);margin-top:8px;font-size:.95rem">Per cataloghi, istruzioni, tracciamento prodotti. Semplici da usare. <span style="color:var(--accent-dark);font-weight:600">Clicca per ingrandire →</span> <a href="/servizi/codici-qr-intelligenti/" style="color:var(--accent);font-weight:600" onclick="event.stopPropagation()">Approfondisci →</a></p></div>
       </article>
       <article class="card sol-card reveal delay-2" data-gif="shazam" data-gif-src="shazam_system_2sec.gif" data-gif-caption="1 · Esperienza ospite — Totem digitale (Sistemi tipo Shazam)" role="button" tabindex="0" aria-label="Apri demo Sistemi tipo Shazam">
         <img class="sol-img" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=500&h=250&fit=crop&q=80" alt="Magazzino e riconoscimento prodotti — clicca per la demo" loading="lazy" width="500" height="250">
-        <div class="sol-body"><div class="ico">◎</div><h3 id="sol3-h">Sistemi tipo Shazam</h3><p id="sol3-p" style="color:var(--muted);margin-top:8px;font-size:.95rem">Riconoscimento di suoni, immagini o prodotti. Utile in magazzino. <span style="color:var(--accent-dark);font-weight:600">Clicca per vedere la demo →</span></p></div>
+        <div class="sol-body"><div class="ico">◎</div><h3 id="sol3-h"><a href="/servizi/sistemi-riconoscimento-tipo-shazam/" style="color:inherit;text-decoration:none">Sistemi tipo Shazam</a></h3><p id="sol3-p" style="color:var(--muted);margin-top:8px;font-size:.95rem">Riconoscimento di suoni, immagini o prodotti. Utile in magazzino. <span style="color:var(--accent-dark);font-weight:600">Clicca per vedere la demo →</span> <a href="/servizi/sistemi-riconoscimento-tipo-shazam/" style="color:var(--accent);font-weight:600" onclick="event.stopPropagation()">Approfondisci →</a></p></div>
       </article>
       <article class="card sol-card reveal">
         <img class="sol-img" src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=500&h=250&fit=crop&q=80" alt="CRM e automazione processi" loading="lazy" width="500" height="250">
-        <div class="sol-body"><div class="ico">☰</div><h3 id="sol4-h">CRM e automazione</h3><p id="sol4-p" style="color:var(--muted);margin-top:8px;font-size:.95rem">Clienti, ordini e vendite in un unico posto. Email e documenti gestiti in automatico.</p></div>
+        <div class="sol-body"><div class="ico">☰</div><h3 id="sol4-h"><a href="/servizi/crm-e-automazione-processi/" style="color:inherit;text-decoration:none">CRM e automazione</a></h3><p id="sol4-p" style="color:var(--muted);margin-top:8px;font-size:.95rem">Clienti, ordini e vendite in un unico posto. Email e documenti gestiti in automatico. <a href="/servizi/crm-e-automazione-processi/" style="color:var(--accent);font-weight:600" onclick="event.stopPropagation()">Approfondisci →</a></p></div>
       </article>
       <article class="card sol-card reveal delay-1" data-gif="pricescraper" data-gif-src="price_scraping_dynamic.gif" data-gif-caption="Market Price Intelligence — Price Scraping Monitor LIVE" role="button" tabindex="0" aria-label="Apri demo Price Scraper">
         <img class="sol-img sol-img-gif" src="price_scraping_dynamic.gif" alt="Price Scraper — monitoraggio prezzi competitor in tempo reale" loading="lazy" width="500" height="250">
-        <div class="sol-body"><div class="ico">📊</div><h3 id="sol5-h">Price scraper</h3><p id="sol5-p" style="color:var(--muted);margin-top:8px;font-size:.95rem">Monitoraggio prezzi dei competitor in tempo reale. Alert e trend automatici. <span style="color:var(--accent-dark);font-weight:600">Clicca per ingrandire →</span></p></div>
+        <div class="sol-body"><div class="ico">📊</div><h3 id="sol5-h"><a href="/servizi/price-scraper-monitoraggio-prezzi/" style="color:inherit;text-decoration:none">Price scraper</a></h3><p id="sol5-p" style="color:var(--muted);margin-top:8px;font-size:.95rem">Monitoraggio prezzi dei competitor in tempo reale. Alert e trend automatici. <span style="color:var(--accent-dark);font-weight:600">Clicca per ingrandire →</span> <a href="/servizi/price-scraper-monitoraggio-prezzi/" style="color:var(--accent);font-weight:600" onclick="event.stopPropagation()">Approfondisci →</a></p></div>
       </article>
       <article class="card sol-card reveal delay-2" data-gif="assistente" data-gif-src="assistente_bubble_lato.gif" data-gif-caption="Order Tracking — Assistente intelligente 24/7" role="button" tabindex="0" aria-label="Apri demo Assistenti intelligenti">
         <img class="sol-img sol-img-gif" src="assistente_bubble_lato.gif" alt="Assistenti intelligenti — demo animata order tracking" loading="lazy" width="500" height="250">
-        <div class="sol-body"><div class="ico">◉</div><h3 id="sol6-h">Assistenti intelligenti</h3><p id="sol6-p" style="color:var(--muted);margin-top:8px;font-size:.95rem">Rispondono alle domande comuni dei clienti, anche di notte. <span style="color:var(--accent-dark);font-weight:600">Clicca per ingrandire →</span></p></div>
+        <div class="sol-body"><div class="ico">◉</div><h3 id="sol6-h"><a href="/servizi/assistenti-intelligenti-aziende/" style="color:inherit;text-decoration:none">Assistenti intelligenti</a></h3><p id="sol6-p" style="color:var(--muted);margin-top:8px;font-size:.95rem">Rispondono alle domande comuni dei clienti, anche di notte. <span style="color:var(--accent-dark);font-weight:600">Clicca per ingrandire →</span> <a href="/servizi/assistenti-intelligenti-aziende/" style="color:var(--accent);font-weight:600" onclick="event.stopPropagation()">Approfondisci →</a></p></div>
       </article>
     </div>
   </div>

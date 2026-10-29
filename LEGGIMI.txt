@@ -1,4 +1,6 @@
-1. Carica le cartelle servizi/*/index.html
-2. Sostituisci index.html (menu a tendina desktop + mobile)
-3. Sostituisci internazionalizzazione-aziende-italiane-polonia/index.html (hub link)
-4. Aggiungi le URL del snippet alla sitemap.xml
+DEPLOY Impatto AI + soluzioni digitali
+1. servizi/*/index.html (5 pagine nuove)
+2. index.html (menu Impatto AI desktop+mobile, link sol cards, pulsante Approfondisci)
+3. intelligenza-artificiale-trasformazione-digitale-pmi/index.html (hub soluzioni)
+4. Aggiungere URL dello snippet alla sitemap.xml
+Le GIF devono restare in root del sito: qr_scan_orizzontale.gif, shazam_system_2sec.gif, price_scraping_dynamic.gif, assistente_bubble_lato.gif
