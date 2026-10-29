@@ -481,13 +481,15 @@
     .nav-item>a:hover{color:var(--primary)}
     .nav-item .chev{font-size:.65rem;opacity:.7}
     .dropdown{display:none;position:absolute;top:100%;left:0;min-width:280px;background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:0 12px 32px rgba(15,23,42,.12);padding:8px;z-index:50;margin-top:8px}
-    .nav-item:hover>.dropdown,.nav-item:focus-within>.dropdown{display:block}
+    .nav-item>.dropdown{display:none}
+    .nav-item.open>.dropdown{display:block}
+    .nav-item>a[aria-expanded="true"]{color:var(--primary)}
     .dropdown a{display:block;padding:10px 12px;border-radius:8px;text-decoration:none;color:var(--fg);font-size:.88rem;font-weight:500}
     .dropdown a:hover{background:#f1f5f9;color:var(--primary)}
     .dropdown .sub{position:relative}
-    .dropdown .sub>a::after{content:" ›";opacity:.5}
+    .dropdown .sub>a.sub-toggle::after{content:" ›";opacity:.5}
     .dropdown-sub{display:none;position:absolute;left:100%;top:0;min-width:260px;background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:0 12px 32px rgba(15,23,42,.12);padding:8px;margin-left:4px}
-    .dropdown .sub:hover>.dropdown-sub,.dropdown .sub:focus-within>.dropdown-sub{display:block}
+    .dropdown .sub.open>.dropdown-sub{display:block}
     @media(max-width:980px){
       .dropdown,.dropdown-sub{position:static;box-shadow:none;border:none;min-width:0;margin:0;padding-left:8px;display:none}
       .nav-item.open>.dropdown,.dropdown .sub.open>.dropdown-sub{display:block}
@@ -830,11 +832,12 @@
       </picture>The Best <span>Job</span></a>
     <ul class="nav-links">
       <li class="nav-item">
-        <a id="nav-services" href="#servizi">Servizi <span class="chev">▾</span></a>
+        <a id="nav-services" href="#servizi" aria-expanded="false" aria-haspopup="true">Servizi <span class="chev">▾</span></a>
         <div class="dropdown" role="menu">
           <div class="sub">
-            <a href="/internazionalizzazione-aziende-italiane-polonia/">Supporto startup in Polonia</a>
+            <a href="/internazionalizzazione-aziende-italiane-polonia/" class="sub-toggle" data-sub-toggle="1">Supporto startup in Polonia</a>
             <div class="dropdown-sub">
+              <a href="/internazionalizzazione-aziende-italiane-polonia/">Panoramica supporto startup</a>
               <a href="/servizi/sede-legale-e-sala-riunioni-polonia/">Sede legale e sala riunioni</a>
               <a href="/servizi/supporto-operativo-amministrativo-polonia/">Supporto operativo e amministrativo</a>
               <a href="/servizi/temporary-manager-espansione-polonia/">Temporary manager</a>
@@ -848,7 +851,7 @@
         </div>
       </li>
       <li class="nav-item">
-        <a id="nav-ai" href="#impatto-ai">Impatto dell'AI <span class="chev">▾</span></a>
+        <a id="nav-ai" href="#impatto-ai" aria-expanded="false" aria-haspopup="true">Impatto dell'AI <span class="chev">▾</span></a>
         <div class="dropdown" role="menu">
           <a href="/intelligenza-artificiale-trasformazione-digitale-pmi/">Digitale e intelligenza artificiale</a>
           <a href="/sviluppo-siti-web-app-ai/">Siti web e app</a>
@@ -2080,7 +2083,56 @@ function setLang(l) {
   updateCalc();
 }
 
-function closeMM() { document.getElementById('mm').classList.remove('open'); }
+function closeMM() { var m=document.getElementById('mm'); if(m) m.classList.remove('open'); }
+
+/* Desktop dropdown: click to open/close (not hover) */
+(function(){
+  function closeAllNav(except){
+    document.querySelectorAll('.nav-links > .nav-item.open').forEach(function(li){
+      if (except && li === except) return;
+      li.classList.remove('open');
+      var a = li.querySelector(':scope > a');
+      if (a) a.setAttribute('aria-expanded', 'false');
+      li.querySelectorAll('.sub.open').forEach(function(s){ s.classList.remove('open'); });
+    });
+  }
+  document.querySelectorAll('.nav-links > .nav-item > a[aria-haspopup="true"]').forEach(function(trigger){
+    trigger.addEventListener('click', function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      var li = trigger.parentElement;
+      var willOpen = !li.classList.contains('open');
+      closeAllNav(willOpen ? li : null);
+      if (willOpen) {
+        li.classList.add('open');
+        trigger.setAttribute('aria-expanded', 'true');
+      } else {
+        li.classList.remove('open');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+  // Nested submenu (Supporto startup) — click to keep open
+  document.querySelectorAll('.dropdown .sub > a.sub-toggle').forEach(function(a){
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      var sub = a.parentElement;
+      var willOpen = !sub.classList.contains('open');
+      document.querySelectorAll('.dropdown .sub.open').forEach(function(s){
+        if (s !== sub) s.classList.remove('open');
+      });
+      if (willOpen) sub.classList.add('open');
+      else sub.classList.remove('open');
+    });
+  });
+  document.addEventListener('click', function(e){
+    if (!e.target.closest('.nav-links')) closeAllNav(null);
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') closeAllNav(null);
+  });
+})();
 
 /* ─────────────────────────────────────────
    Calculator
