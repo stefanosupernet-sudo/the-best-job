@@ -77,26 +77,44 @@
     footer{margin-top:28px;padding-top:16px;border-top:1px solid var(--border);font-size:.85rem;color:var(--muted)}
     footer a{color:var(--muted)}
     .lang{font-size:.8rem;padding:8px 16px;background:#f3f5fb;border-bottom:1px solid var(--border);display:flex;gap:12px;justify-content:flex-end}
-  </style>
+  
+.site-header{background:#fff;border-bottom:1px solid var(--bd,#dce3f0);position:sticky;top:0;z-index:40}
+.site-header .inner{max-width:1100px;margin:0 auto;padding:10px 16px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;justify-content:space-between}
+.site-header .brand{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:var(--p,#312e81);font-weight:700;font-size:1.05rem}
+.site-header .brand img{height:36px;width:auto;display:block}
+.site-header .brand span{color:var(--a,#0e9bb8)}
+.site-header .main-nav{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;list-style:none;margin:0;padding:0}
+.site-header .main-nav a{text-decoration:none;color:var(--m,#5c6578);font-size:.86rem;font-weight:500;padding:6px 4px}
+.site-header .main-nav a:hover{color:var(--p,#312e81)}
+.site-header .main-nav a.cta{background:var(--p,#312e81);color:#fff!important;border-radius:999px;padding:8px 14px;font-weight:600}
+.site-header .svc-bar{width:100%;display:flex;flex-wrap:wrap;gap:6px 10px;padding:6px 0 2px;border-top:1px solid #eef2f7;margin-top:2px}
+.site-header .svc-bar a{font-size:.78rem;color:var(--m,#5c6578);text-decoration:none;padding:4px 8px;border-radius:999px;background:#f3f5fb;border:1px solid #e2e8f0}
+.site-header .svc-bar a:hover,.site-header .svc-bar a.on{background:var(--p,#312e81);color:#fff;border-color:var(--p,#312e81)}
+@media(max-width:700px){
+  .site-header .main-nav{width:100%}
+  .site-header .svc-bar{gap:4px}
+}
+</style>
 </head>
 <body>
-<div class="lang">
-  <a href="https://thebestjob.org/internazionalizzazione-aziende-italiane-polonia/" hreflang="it">IT</a>
-  <a href="https://thebestjob.org/pl/startup-polska/" hreflang="pl">PL</a>
-  <a href="https://thebestjob.org/en/poland-startup/" hreflang="en">EN</a>
-</div>
-<div class="wrap">
-  <a class="logo" href="https://thebestjob.org/pl/">The Best <span>Job</span></a>
-  <nav class="nav">
-    <a href="https://thebestjob.org/pl/">Strona główna</a>
-    <a href="https://thebestjob.org/pl/kontakt/">Kontakt</a>
-    <a href="https://thebestjob.org/pl/faq-startup-polska/">FAQ</a>
-  </nav>
-  <div class="pills">
-    <a class="pill active" href="https://thebestjob.org/pl/startup-polska/">Wejście na rynek PL</a>
-    <a class="pill" href="https://thebestjob.org/pl/ekspansja-wlochy/">Ekspansja do Włoch</a>
-    <a class="pill" href="https://thebestjob.org/pl/cyfryzacja-ai/">Cyfryzacja i AI</a>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="https://thebestjob.org/pl/"><img src="/logo-header.png" width="56" height="36" alt="The Best Job">The Best <span>Job</span></a>
+    <ul class="main-nav">
+      <li><a href="https://thebestjob.org/pl/">Strona główna</a></li>
+      <li><a href="https://thebestjob.org/pl/startup-polska/">Polska</a></li>
+      <li><a href="https://thebestjob.org/pl/ekspansja-wlochy/">Włochy</a></li>
+      <li><a href="https://thebestjob.org/pl/cyfryzacja-ai/">Cyfryzacja i AI</a></li>
+      <li><a href="https://thebestjob.org/pl/#faq">FAQ</a></li>
+      <li><a class="cta" href="https://thebestjob.org/pl/kontakt/">Kontakt</a></li>
+    </ul>
+    <div class="svc-bar"><a href="https://thebestjob.org/pl/uslugi/adres-siedziby-sale-spotkan/" class="">Adres siedziby</a><a href="https://thebestjob.org/pl/uslugi/wsparcie-operacyjne-administracyjne/" class="">Wsparcie ops</a><a href="https://thebestjob.org/pl/uslugi/temporary-manager-polska/" class="">Temp. manager</a><a href="https://thebestjob.org/pl/uslugi/strategia-wejscia-na-rynek/" class="">Strategia</a><a href="https://thebestjob.org/pl/uslugi/pozwolenia-i-licencje/" class="">Pozwolenia</a><a href="https://thebestjob.org/pl/uslugi/inteligentne-kody-qr/" class="">Kody QR</a><a href="https://thebestjob.org/pl/uslugi/rozpoznawanie-produktow/" class="">Rozpoznawanie</a><a href="https://thebestjob.org/pl/uslugi/crm-automatyzacja-procesow/" class="">CRM</a><a href="https://thebestjob.org/pl/uslugi/price-scraper-monitoring-cen/" class="">Price scraper</a><a href="https://thebestjob.org/pl/uslugi/asystenci-ai-dla-firm/" class="">Asystenci AI</a><a href="https://thebestjob.org/sviluppo-siti-web-app-ai/" class="">Strony WWW</a></div>
   </div>
+</header>
+
+<div class="wrap">
+<div class="pills"><a class="pill active" href="https://thebestjob.org/pl/startup-polska/">Wejście na rynek PL</a><a class="pill" href="https://thebestjob.org/pl/ekspansja-wlochy/">Ekspansja do Włoch</a><a class="pill" href="https://thebestjob.org/pl/cyfryzacja-ai/">Cyfryzacja i AI</a></div>
 
   <h1>Wsparcie startupów i wejście na rynek w Polsce</h1>
   <p class="lead">Wejście na nowy rynek najczęściej utyka nie z braku ambicji, tylko z braku jasnej kolejności kroków. Koordynujemy praktyczny pakiet, żeby międzynarodowi founderzy i MŚP mogli startować w Polsce z jednym kontaktem, czytelnym planem i mniejszą liczbą niespodzianek.</p>

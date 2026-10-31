@@ -47,17 +47,43 @@ p,li{margin-bottom:10px}ul{margin:8px 0 16px 1.15rem}
 .related h2{margin-top:0;font-size:1.1rem}
 footer{margin-top:36px;padding-top:16px;border-top:1px solid var(--bd);font-size:.85rem;color:var(--m)}
 @media(max-width:600px){.demo-gif{max-height:50vh}}
+
+.site-header{background:#fff;border-bottom:1px solid var(--bd,#dce3f0);position:sticky;top:0;z-index:40}
+.site-header .inner{max-width:1100px;margin:0 auto;padding:10px 16px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;justify-content:space-between}
+.site-header .brand{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:var(--p,#312e81);font-weight:700;font-size:1.05rem}
+.site-header .brand img{height:36px;width:auto;display:block}
+.site-header .brand span{color:var(--a,#0e9bb8)}
+.site-header .main-nav{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;list-style:none;margin:0;padding:0}
+.site-header .main-nav a{text-decoration:none;color:var(--m,#5c6578);font-size:.86rem;font-weight:500;padding:6px 4px}
+.site-header .main-nav a:hover{color:var(--p,#312e81)}
+.site-header .main-nav a.cta{background:var(--p,#312e81);color:#fff!important;border-radius:999px;padding:8px 14px;font-weight:600}
+.site-header .svc-bar{width:100%;display:flex;flex-wrap:wrap;gap:6px 10px;padding:6px 0 2px;border-top:1px solid #eef2f7;margin-top:2px}
+.site-header .svc-bar a{font-size:.78rem;color:var(--m,#5c6578);text-decoration:none;padding:4px 8px;border-radius:999px;background:#f3f5fb;border:1px solid #e2e8f0}
+.site-header .svc-bar a:hover,.site-header .svc-bar a.on{background:var(--p,#312e81);color:#fff;border-color:var(--p,#312e81)}
+@media(max-width:700px){
+  .site-header .main-nav{width:100%}
+  .site-header .svc-bar{gap:4px}
+}
+
 </style>
 </head>
 <body>
 <div class="wrap">
-<a class="logo" href="https://thebestjob.org/">The Best <span>Job</span></a>
-<nav class="top">
-<a href="https://thebestjob.org/intelligenza-artificiale-trasformazione-digitale-pmi/">Digitale e AI</a>
-<a href="https://thebestjob.org/#soluzioni">Soluzioni digitali</a>
-<a href="https://thebestjob.org/#impatto-ai">Impatto dell'AI</a>
-<a href="https://thebestjob.org/contatti/">Contatti</a>
-</nav>
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="https://thebestjob.org/"><img src="/logo-header.png" width="56" height="36" alt="The Best Job">The Best <span>Job</span></a>
+    <ul class="main-nav">
+      <li><a href="https://thebestjob.org/">Home</a></li>
+      <li><a href="https://thebestjob.org/internazionalizzazione-aziende-italiane-polonia/">Polonia</a></li>
+      <li><a href="https://thebestjob.org/espansione-aziende-polacche-italia/">Italia</a></li>
+      <li><a href="https://thebestjob.org/intelligenza-artificiale-trasformazione-digitale-pmi/">Digitale e AI</a></li>
+      <li><a href="https://thebestjob.org/#faq">FAQ</a></li>
+      <li><a class="cta" href="https://thebestjob.org/contatti/">Contatti</a></li>
+    </ul>
+    <div class="svc-bar"><a href="https://thebestjob.org/servizi/sede-legale-e-sala-riunioni-polonia/" class="">Sede legale</a><a href="https://thebestjob.org/servizi/supporto-operativo-amministrativo-polonia/" class="">Supporto ops</a><a href="https://thebestjob.org/servizi/temporary-manager-espansione-polonia/" class="">Temporary manager</a><a href="https://thebestjob.org/servizi/consulenza-strategica-ingresso-mercato-polonia/" class="">Strategia</a><a href="https://thebestjob.org/servizi/assistenza-enti-licenze-polonia/" class="">Licenze</a><a href="https://thebestjob.org/servizi/codici-qr-intelligenti/" class="">QR intelligenti</a><a href="https://thebestjob.org/servizi/sistemi-riconoscimento-tipo-shazam/" class="">Tipo Shazam</a><a href="https://thebestjob.org/servizi/crm-e-automazione-processi/" class="on">CRM</a><a href="https://thebestjob.org/servizi/price-scraper-monitoraggio-prezzi/" class="">Price scraper</a><a href="https://thebestjob.org/servizi/assistenti-intelligenti-aziende/" class="">Assistenti AI</a><a href="https://thebestjob.org/sviluppo-siti-web-app-ai/" class="">Siti web e app</a></div>
+  </div>
+</header>
+
 <p class="bc"><a href="https://thebestjob.org/">Home</a> · <a href="https://thebestjob.org/intelligenza-artificiale-trasformazione-digitale-pmi/">Digitale e AI</a> · CRM e automazione dei processi aziendali</p>
 <article>
 <h1>CRM e automazione: l'azienda ordinata, senza lavoro doppio</h1>
