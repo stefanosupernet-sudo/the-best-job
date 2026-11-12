@@ -25,23 +25,16 @@
 {"@type":"BreadcrumbList","itemListElement":[
 {"@type":"ListItem","position":1,"name":"Home","item":"https://thebestjob.org/"},
 {"@type":"ListItem","position":2,"name":"Digitale e AI","item":"https://thebestjob.org/intelligenza-artificiale-trasformazione-digitale-pmi/"},
-{"@type":"ListItem","position":3,"name":"QR Code nel Logo","item":"https://thebestjob.org/servizi/codici-qr-intelligenti/"}
+{"@type":"ListItem","position":3,"name":"QR Code nel Logo — guida avanzata per aziende innovative","item":"https://thebestjob.org/servizi/codici-qr-intelligenti/"}
 ]}
-]}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"Perché inserire il QR code all'interno del logo anziché stamparlo a parte?","acceptedAnswer":{"@type":"Answer","text":"Inserire il codice all'interno del logo nobilita l'immagine aziendale, trasformando un elemento tecnico in un dettaglio di design che rafforza il riconoscimento del brand."}},
-{"@type":"Question","name":"I QR code dinamici richiedono una nuova stampa se si modifica il sito web?","acceptedAnswer":{"@type":"Answer","text":"No. I codici dinamici permettono di aggiornare la destinazione digitale mantenendo intatta la grafica stampata."}},
-{"@type":"Question","name":"È possibile scansionare un logo con QR code in condizioni di scarsa illuminazione?","acceptedAnswer":{"@type":"Answer","text":"Sì, grazie a materiali fluorescenti o trattamenti ad alto contrasto il codice risulta leggibile anche in penombra."}},
-{"@type":"Question","name":"Che ruolo ha Python nella creazione di questi loghi avanzati?","acceptedAnswer":{"@type":"Answer","text":"Python gestisce la correzione degli errori e la fusione geometrica tra moduli QR ed elementi grafici del logo."}},
-{"@type":"Question","name":"Cosa accade una volta inquadrato il logo con lo smartphone?","acceptedAnswer":{"@type":"Answer","text":"Il sistema reindirizza a una risorsa ottimizzata che consente di scaricare e salvare la scheda contatti (vCard) nella rubrica."}}
 ]}
 </script>
 <style>
 :root{--p:#312e81;--a:#0e9bb8;--m:#5c6578;--bg:#f3f5fb;--bd:#dce3f0;--c:#fff}
 *{box-sizing:border-box;margin:0;padding:0}body{font-family:system-ui,sans-serif;background:var(--bg);color:#0f172a;line-height:1.65}
 .wrap{max-width:800px;margin:0 auto;padding:24px 18px 72px}a{color:var(--p)}
+.logo{font-weight:700;font-size:1.15rem;text-decoration:none;color:var(--p)}.logo span{color:var(--a)}
+nav.top{display:flex;flex-wrap:wrap;gap:10px 14px;margin:14px 0 20px;font-size:.88rem}nav.top a{text-decoration:none;color:var(--m);font-weight:500}
 .bc{font-size:.85rem;color:var(--m);margin-bottom:12px}
 h1{font-size:clamp(1.35rem,3.5vw,1.9rem);line-height:1.25;color:var(--p);margin:8px 0 14px}
 h2{font-size:1.15rem;color:var(--p);margin:26px 0 10px}.lead{font-size:1.08rem;color:var(--m);margin-bottom:16px}
@@ -53,90 +46,279 @@ p,li{margin-bottom:10px}ul{margin:8px 0 16px 1.15rem}
 .related{background:var(--c);border:1px solid var(--bd);border-radius:14px;padding:18px 20px;margin:28px 0}
 .related h2{margin-top:0;font-size:1.1rem}
 footer{margin-top:36px;padding-top:16px;border-top:1px solid var(--bd);font-size:.85rem;color:var(--m)}
+@media(max-width:600px){.demo-gif{max-height:50vh}}
+
+.site-header{background:#fff;border-bottom:1px solid var(--bd,#dce3f0);position:sticky;top:0;z-index:40}
+.site-header .inner{max-width:1100px;margin:0 auto;padding:10px 16px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;justify-content:space-between}
+.site-header .brand{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:var(--p,#312e81);font-weight:700;font-size:1.05rem}
+.site-header .brand img{height:36px;width:auto;display:block}
+.site-header .brand span{color:var(--a,#0e9bb8)}
+.site-header .main-nav{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;list-style:none;margin:0;padding:0}
+.site-header .main-nav a{text-decoration:none;color:var(--m,#5c6578);font-size:.86rem;font-weight:500;padding:6px 4px}
+.site-header .main-nav a:hover{color:var(--p,#312e81)}
+.site-header .main-nav a.cta{background:var(--p,#312e81);color:#fff!important;border-radius:999px;padding:8px 14px;font-weight:600}
+.site-header .svc-bar{width:100%;display:flex;flex-wrap:wrap;gap:6px 10px;padding:6px 0 2px;border-top:1px solid #eef2f7;margin-top:2px}
+.site-header .svc-bar a{font-size:.78rem;color:var(--m,#5c6578);text-decoration:none;padding:4px 8px;border-radius:999px;background:#f3f5fb;border:1px solid #e2e8f0}
+.site-header .svc-bar a:hover,.site-header .svc-bar a.on{background:var(--p,#312e81);color:#fff;border-color:var(--p,#312e81)}
+@media(max-width:700px){
+  .site-header .main-nav{width:100%}
+  .site-header .svc-bar{gap:4px}
+}
+
+
+.il-box{background:#fff;border:1px solid var(--bd,#dce3f0);border-radius:14px;padding:18px 20px;margin:22px 0}
+.il-box h2,.il-box h3{font-size:1.05rem;color:var(--p,#312e81);margin:0 0 10px}
+.il-box ul{margin:0;padding:0;list-style:none}
+.il-box li{margin:0;border-bottom:1px solid #eef2f7}
+.il-box li:last-child{border-bottom:0}
+.il-box a{display:block;padding:10px 2px;text-decoration:none;color:var(--p,#312e81);font-weight:600;font-size:.92rem}
+.il-box a:hover{color:var(--a,#0e9bb8)}
+.il-box .muted{font-weight:400;color:var(--m,#5c6578);font-size:.88rem}
+.il-hubs{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.il-hubs a{display:inline-flex;align-items:center;padding:8px 12px;border-radius:999px;background:#f3f5fb;border:1px solid #e2e8f0;text-decoration:none;color:var(--m,#5c6578);font-size:.85rem;font-weight:600}
+.il-hubs a:hover{background:var(--p,#312e81);color:#fff;border-color:var(--p,#312e81)}
+.bc{font-size:.85rem;color:var(--m,#5c6578);margin:12px 0 8px}
+.bc a{color:var(--m,#5c6578);text-decoration:none}
+.bc a:hover{color:var(--p,#312e81)}
+
 details{margin:10px 0;padding:12px 14px;background:#fff;border:1px solid var(--bd);border-radius:10px}
 details summary{cursor:pointer;color:var(--p)}
 details p{margin:10px 0 0}
-.il-box{background:#fff;border:1px solid var(--bd);border-radius:14px;padding:18px 20px;margin:22px 0}
-.il-box h2{font-size:1.05rem;color:var(--p);margin:0 0 10px}
-.il-box ul{margin:0;padding:0;list-style:none}
-.il-box a{display:block;padding:10px 2px;text-decoration:none;color:var(--p);font-weight:600}
 </style>
+<style id="tbj-top-css">
+.tbj-top{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid #dce3f0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.tbj-top-inner{max-width:1100px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.tbj-top a.tbj-logo{font-weight:700;font-size:1.1rem;text-decoration:none;color:#312e81}
+.tbj-top a.tbj-logo span{color:#0e9bb8}
+.tbj-top nav.tbj-desk{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.tbj-top nav.tbj-desk a{color:#0f172a;text-decoration:none;font-size:.9rem;font-weight:500}
+.tbj-top nav.tbj-desk a:hover{color:#312e81}
+.tbj-lang{display:flex;gap:6px;font-size:.8rem}
+.tbj-lang a{color:#5c6578;text-decoration:none;padding:4px 8px;border-radius:6px;border:1px solid transparent}
+.tbj-lang a:hover,.tbj-lang a.active{color:#312e81;border-color:#dce3f0;background:#f3f5fb;font-weight:700}
+.tbj-ham{display:none;width:44px;height:44px;border:1px solid #dce3f0;border-radius:10px;background:#fff;cursor:pointer;align-items:center;justify-content:center;padding:0}
+.tbj-ham span,.tbj-ham span:before,.tbj-ham span:after{display:block;width:18px;height:2px;background:#0f172a;border-radius:1px;position:relative;transition:.2s}
+.tbj-ham span:before,.tbj-ham span:after{content:"";position:absolute;left:0}
+.tbj-ham span:before{top:-6px}.tbj-ham span:after{top:6px}
+.tbj-ham[aria-expanded="true"] span{background:transparent}
+.tbj-ham[aria-expanded="true"] span:before{top:0;transform:rotate(45deg)}
+.tbj-ham[aria-expanded="true"] span:after{top:0;transform:rotate(-45deg)}
+.tbj-mm{display:none;width:100%;flex-direction:column;gap:2px;padding:8px 16px 12px;border-top:1px solid #dce3f0}
+.tbj-mm.open{display:flex}
+.tbj-mm a{text-decoration:none;color:#0f172a;font-weight:500;padding:12px 4px;border-radius:8px;font-size:.95rem}
+.tbj-mm a:hover{color:#312e81;background:#f3f5fb}
+@media(max-width:720px){
+  .tbj-top nav.tbj-desk{display:none}
+  .tbj-ham{display:inline-flex}
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Perché inserire il QR code all'interno del logo anziché stamparlo a parte?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Inserire il codice all'interno del logo nobilita l'immagine aziendale, trasformando un elemento tecnico in un dettaglio di design che rafforza il riconoscimento del brand e stimola la curiosità."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "I QR code dinamici richiedono una nuova stampa se si modifica il sito web?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. I codici dinamici permettono di aggiornare la destinazione digitale mantenendo intatta la grafica stampata su spille o biglietti da visita."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "È possibile scansionare un logo con QR code in condizioni di scarsa illuminazione?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sì, grazie a materiali fluorescenti o trattamenti ad alto contrasto il codice risulta leggibile anche in ambienti in penombra."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Che ruolo ha Python nella creazione di questi loghi avanzati?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Python viene utilizzato per gestire la correzione degli errori e la fusione geometrica tra i moduli del QR e gli elementi grafici del logo, garantendo che l'estetica non pregiudichi la scansionabilità."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cosa accade una volta inquadrato il logo con lo smartphone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Il sistema reindirizza a una risorsa ottimizzata che consente di scaricare e salvare la scheda contatti (vCard) nella rubrica del telefono."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
+<div class="tbj-top" id="tbj-top">
+  <div class="tbj-top-inner">
+    <a class="tbj-logo" href="https://thebestjob.org/">The Best <span>Job</span></a>
+    <nav class="tbj-desk" aria-label="Menu">
+      <a href="https://thebestjob.org/">Home</a>
+      <a href="https://thebestjob.org/startup-polonia/">Startup Polonia</a>
+      <a href="https://thebestjob.org/digitale-ai/">Digitale & AI</a>
+      <a href="https://thebestjob.org/contatti/">Contatti</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:8px;margin-left:auto">
+      <div class="tbj-lang" aria-label="Language">
+        <a href="/contatti/" hreflang="it" class="active">IT</a>
+        <a href="/pl/kontakt/" hreflang="pl" class="">PL</a>
+        <a href="/en/contact/" hreflang="en" class="">EN</a>
+      </div>
+      <button type="button" class="tbj-ham" id="tbj-ham" aria-label="Menu" aria-expanded="false" aria-controls="tbj-mm" onclick="tbjToggleMM()"><span></span></button>
+    </div>
+  </div>
+  <nav class="tbj-mm" id="tbj-mm" hidden>
+    <a href="https://thebestjob.org/" onclick="tbjCloseMM()">Home</a>
+    <a href="https://thebestjob.org/startup-polonia/" onclick="tbjCloseMM()">Startup Polonia</a>
+    <a href="https://thebestjob.org/digitale-ai/" onclick="tbjCloseMM()">Digitale & AI</a>
+    <a href="https://thebestjob.org/contatti/" onclick="tbjCloseMM()">Contatti</a>
+  </nav>
+</div>
+<script>
+function tbjToggleMM(){var m=document.getElementById("tbj-mm");var h=document.getElementById("tbj-ham");var open=m.classList.toggle("open");h.setAttribute("aria-expanded",open?"true":"false");m.hidden=!open;}
+function tbjCloseMM(){var m=document.getElementById("tbj-mm");var h=document.getElementById("tbj-ham");if(!m)return;m.classList.remove("open");m.hidden=true;if(h)h.setAttribute("aria-expanded","false");}
+</script>
+
 <div class="wrap">
+<header class="site-header"><div class="inner">
+<a class="brand" href="https://thebestjob.org/"><img src="/logo-header.png" width="56" height="36" alt="The Best Job">The Best <span>Job</span></a>
+<ul class="main-nav">
+<li><a href="https://thebestjob.org/">Home</a></li>
+<li><a href="https://thebestjob.org/internazionalizzazione-aziende-italiane-polonia/">Polonia</a></li>
+<li><a href="https://thebestjob.org/espansione-aziende-polacche-italia/">Italia</a></li>
+<li><a href="https://thebestjob.org/intelligenza-artificiale-trasformazione-digitale-pmi/">Digitale e AI</a></li>
+<li><a href="https://thebestjob.org/#faq">FAQ</a></li>
+<li><a class="cta" href="https://thebestjob.org/contatti/">Contatti</a></li>
+</ul>
+<div class="svc-bar"><a href="https://thebestjob.org/servizi/sede-legale-e-sala-riunioni-polonia/" class="">Sede legale</a><a href="https://thebestjob.org/servizi/supporto-operativo-amministrativo-polonia/" class="">Supporto ops</a><a href="https://thebestjob.org/servizi/temporary-manager-espansione-polonia/" class="">Temporary manager</a><a href="https://thebestjob.org/servizi/consulenza-strategica-ingresso-mercato-polonia/" class="">Strategia</a><a href="https://thebestjob.org/servizi/assistenza-enti-licenze-polonia/" class="">Licenze</a><a href="https://thebestjob.org/servizi/codici-qr-intelligenti/" class="on">QR intelligenti</a><a href="https://thebestjob.org/servizi/sistemi-riconoscimento-tipo-shazam/" class="">Tipo Shazam</a><a href="https://thebestjob.org/servizi/crm-e-automazione-processi/" class="">CRM</a><a href="https://thebestjob.org/servizi/price-scraper-monitoraggio-prezzi/" class="">Price scraper</a><a href="https://thebestjob.org/servizi/assistenti-intelligenti-aziende/" class="">Assistenti AI</a><a href="https://thebestjob.org/sviluppo-siti-web-app-ai/" class="">Siti web e app</a></div>
+</div></header>
+
 <p class="bc"><a href="https://thebestjob.org/">Home</a> · <a href="https://thebestjob.org/intelligenza-artificiale-trasformazione-digitale-pmi/">Digitale e AI</a> · QR Code nel Logo</p>
 <article>
 <h1>QR Code nel Logo: guida avanzata SEO, AEO e GEO per aziende innovative</h1>
+
 <figure class="media">
 <picture>
-<source type="image/webp" srcset="/the-best-job-logo-qr-fluorescente.webp">
-<img src="/the-best-job-logo-qr-fluorescente.jpg" alt="Logo The Best Job con QR code integrato nel chip — versione fluorescente" width="1200" height="776" loading="eager" class="demo-gif">
+  <source type="image/webp" srcset="/the-best-job-logo-qr-fluorescente.webp">
+  <img src="/the-best-job-logo-qr-fluorescente.jpg" alt="Logo The Best Job con QR code integrato nel chip — versione fluorescente su sfondo scuro" width="1200" height="776" loading="eager" class="demo-gif">
 </picture>
-<figcaption>Logo The Best Job con QR code integrato nel chip stilizzato.</figcaption>
+<figcaption>Logo The Best Job con QR code integrato nel chip stilizzato — identità visiva e interattività in un unico segno.</figcaption>
 </figure>
+
 <div class="related" style="margin-top:0" id="sintesi">
-<p class="lead" style="margin:0"><strong>Sintesi (30 secondi).</strong> Integrare un QR code <em>dentro</em> il logo unisce brand identity e interazione digitale. Con loghi dinamici, Python per la fusione geometrica, materiali fluorescenti leggibili in penombra e destinazione vCard, biglietti e spille diventano un canale ad alta conversione tra mondo fisico e rubrica del cliente.</p>
+<p class="lead" style="margin:0"><strong>Sintesi (30 secondi).</strong> Integrare un QR code <em>dentro</em> il logo non è un vezzo grafico: è una scelta strategica per unire brand identity e interazione digitale. Con loghi dinamici, Python per la fusione geometrica, materiali fluorescenti leggibili in penombra e destinazione vCard, biglietti da visita e spille diventano un canale ad alta conversione tra mondo fisico e rubrica del cliente.</p>
 </div>
+
 <h2>Il futuro dell'identità visiva: quando il logo incontra il QR code</h2>
-<p>Il logo non è più solo un simbolo statico: può diventare un ponte tra presenza fisica e contenuti digitali aggiornabili. Quando un partner osserva il vostro marchio, deve poter interagire subito — senza app e senza cercare un secondo codice in fondo al biglietto.</p>
-<p>Parliamo di fusione geometrica: il QR non è “appiccicato” in un angolo, ma parte dell’architettura del logo, come nel chip al centro della composizione di The Best Job.</p>
+<p>Nel marketing attuale servono soluzioni eleganti e misurabili. Il logo non è più solo un simbolo statico su carta intestata o in sala riunioni: può diventare un ponte tra presenza fisica e contenuti digitali aggiornabili. Quando un partner o un potenziale cliente osserva il vostro marchio, deve poter interagire subito — senza app dedicate e senza cercare un secondo codice in fondo al biglietto.</p>
+<p>Parliamo di fusione geometrica e concettuale: il QR non è “appiccicato” in un angolo, ma parte dell’architettura del logo, come nel chip al centro della composizione globale di The Best Job.</p>
+
 <figure class="media">
 <picture>
-<source type="image/webp" srcset="/the-best-job-logo-qr-chip.webp">
-<img src="/the-best-job-logo-qr-chip.jpg" alt="Logo The Best Job con QR nel chip su sfondo chiaro" width="1200" height="776" loading="lazy" class="demo-gif">
+  <source type="image/webp" srcset="/the-best-job-logo-qr-chip.webp">
+  <img src="/the-best-job-logo-qr-chip.jpg" alt="Logo The Best Job con QR code nel chip su sfondo chiaro — international growth digital transformation AI" width="1200" height="776" loading="lazy" class="demo-gif">
 </picture>
-<figcaption>Versione su fondo chiaro: QR leggibile e coerente con il sistema visuale.</figcaption>
+<figcaption>Versione su fondo chiaro: il QR resta leggibile e coerente con il sistema visuale (globo, edifici, chip).</figcaption>
 </figure>
+
 <h2>Dentro o fuori dal logo? La differenza strategica</h2>
+<p>Una domanda ricorrente in fase di restyling riguarda la collocazione del codice.</p>
 <ul>
-<li><strong>QR fuori dal logo</strong> — spesso percepito come corpo estraneo: utile, ma spezza l’armonia.</li>
-<li><strong>QR integrato nel logo</strong> — nel chip stilizzato diventa parte dell’architettura del brand, con ordine e modernità.</li>
+<li><strong>QR fuori dal logo</strong> — spesso percepito come corpo estraneo: utile, ma spezza l’armonia e può indebolire l’impatto estetico.</li>
+<li><strong>QR integrato nel logo</strong> — ad esempio nel cuore di un chip stilizzato entro una struttura “globale” — diventa parte dell’architettura del brand. Il marchio non “urla” la funzione tecnologica: la incorpora con ordine e modernità.</li>
 </ul>
-<p>Dal punto di vista AEO e GEO, un unico segno riconoscibile riduce ambiguità: stesso asset su web, stampa e merchandising.</p>
+<p>Dal punto di vista AEO (risposte per assistenti e snippet) e GEO (visibilità in contesti locali e off-line scansionabili), un unico segno riconoscibile riduce ambiguità: stesso asset su web, stampa e merchandising.</p>
+
 <h2>Specifiche tecniche, inquadratura e dimensioni minime</h2>
-<p>La porzione utile del QR non deve scendere sotto una soglia critica di pixel rispetto alla distanza di lettura. Su biglietto da visita le dimensioni vanno calcolate con tolleranza stretta; progettazione corretta e quiet zone adeguata mantengono la leggibilità.</p>
+<p>Affinché la fotocamera metta a fuoco senza incertezze, la porzione utile del QR non deve scendere sotto una soglia critica di pixel rispetto alla distanza di lettura. Su biglietto da visita le dimensioni millimetriche vanno calcolate con tolleranza stretta; una progettazione grafica corretta mantiene leggibilità anche a formati ridotti, grazie a margini di quiet zone e livelli di correzione errore adeguati.</p>
+<p>In sintesi operativa:</p>
 <ul>
-<li>dimensioni minime proporzionate alla distanza tipica di scan;</li>
-<li>contrasto elevato tra moduli e fondo;</li>
+<li>dimensioni minime in stampa proporzionate alla distanza tipica di scan (spilla vs locandina);</li>
+<li>contrasto elevato tra moduli scuri e fondo chiaro (o viceversa con materiali dedicati);</li>
 <li>test su più dispositivi prima della tiratura.</li>
 </ul>
+
 <h2>Materiali fluorescenti e scansione in penombra</h2>
-<p>Trattamenti fotoluminescenti e finiture ad alto contrasto sulla spilla aiutano il sensore ottico anche in penombra, in fiera o durante eventi serali.</p>
+<p>Come rendere scansionabile un codice piccolo in fiera, cocktail o sala poco illuminata? Con trattamenti fotoluminescenti e finiture ad alto contrasto sulla spilla o sul supporto metallico/smaltato. Il logo cattura luce residua e restituisce contrasto sui moduli del QR, aiutando il sensore ottico anche in penombra.</p>
+
 <figure class="media">
 <picture>
-<source type="image/webp" srcset="/the-best-job-spilla-qr-fluorescente.webp">
-<img src="/the-best-job-spilla-qr-fluorescente.jpg" alt="Spilla corporativa The Best Job con logo e QR fluorescenti" width="1000" height="1000" loading="lazy" class="demo-gif">
+  <source type="image/webp" srcset="/the-best-job-spilla-qr-fluorescente.webp">
+  <img src="/the-best-job-spilla-qr-fluorescente.jpg" alt="Spilla corporativa The Best Job con logo e QR code fluorescenti su giacca blu" width="1000" height="1000" loading="lazy" class="demo-gif">
 </picture>
-<figcaption>Spilla corporate: QR nel chip, SCAN ME e URL — personal branding indossabile.</figcaption>
+<figcaption>Spilla corporate: QR nel chip, testo “SCAN ME” e URL — personal branding indossabile.</figcaption>
 </figure>
+
 <figure class="media">
-<img src="/the-best-job-logo-qr-animato.gif" alt="Animazione logo fluorescente con QR code reale integrato" width="900" height="582" loading="lazy" class="demo-gif">
-<figcaption>Versione animata: leggibilità del QR reale integrato nel logo.</figcaption>
+<img src="/the-best-job-logo-qr-animato.gif" alt="Animazione logo fluorescente The Best Job con QR code reale integrato nel chip" width="900" height="582" loading="lazy" class="demo-gif">
+<figcaption>Versione animata: evidenzia leggibilità del QR reale integrato nel logo in condizioni di contrasto elevato.</figcaption>
 </figure>
+
 <h2>Python, QR permanenti e destinazioni aggiornabili</h2>
-<p>Con <strong>Python</strong> si gestiscono matrici di correzione errori e la fusione tra moduli QR ed elementi grafici. Con <strong>QR dinamici</strong> il pattern stampato resta permanente mentre URL e destinazione si aggiornano dal pannello — senza ristampare supporti.</p>
-<h2>Dall’inquadratura alla rubrica: vCard</h2>
-<p>Dopo la scansione, la destinazione ideale è una <strong>scheda contatti vCard</strong>: un tap per salvare nome, ruolo, email, telefono e sito. Su The Best Job i vCard del team sono in <a href="https://thebestjob.org/contatti/">Contatti</a>.</p>
+<p>Dietro l’estetica c’è ingegneria: con <strong>Python</strong> si gestiscono matrici di correzione errori e la fusione tra moduli del QR ed elementi grafici del logo, così l’estetica non pregiudica la scansionabilità. Con <strong>QR dinamici</strong> il pattern stampato resta permanente (spille, targhe, cartiglieria), mentre URL e destinazione si aggiornano dal pannello di controllo — cambio telefono, sito o campagna senza ristampare i supporti.</p>
+
+<h2>Dall’inquadratura alla rubrica: esperienza utente e vCard</h2>
+<p>L’interlocutore inquadra logo su spilla o biglietto; in pochi secondi il telefono apre il link. La destinazione ideale non è solo una landing generica, ma una <strong>scheda contatti vCard</strong>: un tap per salvare nome, ruolo, email, telefono, sito e riferimenti utili. Meno biglietti persi, più contatti utili in rubrica — allineato a conversioni misurabili e a un percorso AEO chiaro (“cosa succede se scansiono?”).</p>
+<p>Su The Best Job i file vCard del team sono già disponibili dalla pagina <a href="https://thebestjob.org/contatti/">Contatti</a>.</p>
+
 <h2>FAQ — QR code nel logo</h2>
-<details><summary><strong>1. Perché il QR dentro il logo?</strong></summary><p>Nobilita l’immagine: l’elemento tecnico diventa dettaglio di design e rafforza il brand recognition.</p></details>
-<details><summary><strong>2. Devo ristampare se cambio il sito?</strong></summary><p>No, con QR dinamici si aggiorna solo la destinazione digitale.</p></details>
-<details><summary><strong>3. Si scansiona in scarsa luce?</strong></summary><p>Sì, con materiali fluorescenti o finiture ad alto contrasto.</p></details>
-<details><summary><strong>4. A cosa serve Python?</strong></summary><p>Correzione errori e fusione geometrica tra QR e grafica del logo.</p></details>
-<details><summary><strong>5. Cosa succede dopo la scansione?</strong></summary><p>Si apre una risorsa ottimizzata (es. vCard) e si salvano i contatti in rubrica.</p></details>
+<div id="faq-qr-logo">
+<details>
+<summary><strong>1. Perché inserire il QR dentro il logo e non stamparlo a parte?</strong></summary>
+<p>Perché nobilita l’immagine: l’elemento tecnico diventa dettaglio di design, rafforza il riconoscimento del brand e stimola la curiosità senza spezzare l’impaginato.</p>
+</details>
+<details>
+<summary><strong>2. Se modifico il sito devo ristampare spille e biglietti?</strong></summary>
+<p>No, con QR dinamici si aggiorna solo la destinazione digitale; la grafica stampata resta invariata.</p>
+</details>
+<details>
+<summary><strong>3. Si può scansionare in scarsa illuminazione?</strong></summary>
+<p>Sì, con materiali fluorescenti o finiture ad alto contrasto il codice resta leggibile anche in penombra, entro i limiti fisici del sensore.</p>
+</details>
+<details>
+<summary><strong>4. Che ruolo ha Python in questi loghi?</strong></summary>
+<p>Serve a gestire correzione errori e fusione geometrica tra moduli QR e grafica, bilanciando estetica e scansionabilità.</p>
+</details>
+<details>
+<summary><strong>5. Cosa succede dopo la scansione?</strong></summary>
+<p>L’utente arriva a una pagina o risorsa ottimizzata — ad esempio il download della vCard — e può salvare i contatti in rubrica con un tocco.</p>
+</details>
+</div>
 
 <h2>Collegamenti utili</h2>
-<p>Va a braccetto con <a href="https://thebestjob.org/servizi/sistemi-riconoscimento-tipo-shazam/">sistemi di riconoscimento</a>, <a href="https://thebestjob.org/servizi/crm-e-automazione-processi/">CRM e automazione</a> e il percorso di <a href="https://thebestjob.org/intelligenza-artificiale-trasformazione-digitale-pmi/">trasformazione digitale e AI</a>.</p>
+<p>Va a braccetto con <a href="https://thebestjob.org/servizi/sistemi-riconoscimento-tipo-shazam/">sistemi di riconoscimento</a>, <a href="https://thebestjob.org/servizi/crm-e-automazione-processi/">CRM e automazione</a> e il percorso di <a href="https://thebestjob.org/intelligenza-artificiale-trasformazione-digitale-pmi/">trasformazione digitale e AI</a>. In homepage, nella sezione Soluzioni digitali, trovate anche la demo animata.</p>
 <p><a class="btn" href="https://thebestjob.org/contatti/">Richiedi una demo sui QR intelligenti</a></p>
+
+
 <aside class="il-box" id="internal-links-related" aria-label="Related">
 <h2>Altre soluzioni digitali</h2>
 <ul>
-<li><a href="https://thebestjob.org/sviluppo-siti-web-app-ai/">Siti web e app</a></li>
-<li><a href="https://thebestjob.org/servizi/sistemi-riconoscimento-tipo-shazam/">Sistemi tipo Shazam</a></li>
-<li><a href="https://thebestjob.org/servizi/crm-e-automazione-processi/">CRM e automazione</a></li>
-<li><a href="https://thebestjob.org/servizi/price-scraper-monitoraggio-prezzi/">Price scraper</a></li>
-<li><a href="https://thebestjob.org/servizi/assistenti-intelligenti-aziende/">Assistenti intelligenti</a></li>
+<li><a href="https://thebestjob.org/sviluppo-siti-web-app-ai/">Siti web e app <span class="muted">→</span></a></li><li><a href="https://thebestjob.org/servizi/sistemi-riconoscimento-tipo-shazam/">Sistemi tipo Shazam <span class="muted">→</span></a></li><li><a href="https://thebestjob.org/servizi/crm-e-automazione-processi/">CRM e automazione <span class="muted">→</span></a></li><li><a href="https://thebestjob.org/servizi/price-scraper-monitoraggio-prezzi/">Price scraper <span class="muted">→</span></a></li><li><a href="https://thebestjob.org/servizi/assistenti-intelligenti-aziende/">Assistenti intelligenti <span class="muted">→</span></a></li>
 </ul>
+<h3 style="margin-top:16px">Continua da qui</h3>
+<div class="il-hubs">
+<a href="https://thebestjob.org/intelligenza-artificiale-trasformazione-digitale-pmi/">Digitale e intelligenza artificiale</a>
+<a href="https://thebestjob.org/faq-ai-trasformazione-digitale/">FAQ Digitale e AI</a>
+<a href="https://thebestjob.org/internazionalizzazione-aziende-italiane-polonia/">Internazionalizzazione in Polonia</a>
+<a href="https://thebestjob.org/contatti/">Contatti</a>
+<a href="https://thebestjob.org/">Home</a>
+</div>
 </aside>
+
 </article>
 <aside class="related">
 <h2>Altre soluzioni digitali</h2>
@@ -144,8 +326,11 @@ details p{margin:10px 0 0}
 <li><a href="https://thebestjob.org/sviluppo-siti-web-app-ai/">Siti web e app con AI</a></li>
 <li><a href="https://thebestjob.org/servizi/sistemi-riconoscimento-tipo-shazam/">Sistemi tipo Shazam</a></li>
 <li><a href="https://thebestjob.org/servizi/crm-e-automazione-processi/">CRM e automazione</a></li>
-<li><a href="https://thebestjob.org/intelligenza-artificiale-trasformazione-digitale-pmi/">Pilastro Digitale e AI</a></li>
+<li><a href="https://thebestjob.org/servizi/price-scraper-monitoraggio-prezzi/">Price scraper</a></li>
+<li><a href="https://thebestjob.org/servizi/assistenti-intelligenti-aziende/">Assistenti intelligenti</a></li>
+<li><a href="https://thebestjob.org/intelligenza-artificiale-trasformazione-digitale-pmi/">Pilastro: Digitale e intelligenza artificiale</a></li>
 <li><a href="https://thebestjob.org/faq-ai-trasformazione-digitale/">FAQ AI e trasformazione digitale</a></li>
+<li><a href="https://thebestjob.org/#soluzioni">Torna alle Soluzioni digitali (demo)</a></li>
 </ul>
 </aside>
 <footer>
