@@ -3,7 +3,6 @@ import pathlib, re
 SKIP = {"index.html", "en/index.html", "pl/index.html"}
 
 CSS_SHARED = """
-/* TBJ sticky header + hamburger */
 .tbj-top{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid #dce3f0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
 .tbj-top-inner{max-width:1100px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .tbj-top a.tbj-logo{font-weight:700;font-size:1.1rem;text-decoration:none;color:#312e81}
@@ -31,67 +30,52 @@ CSS_SHARED = """
 }
 """
 
-def lang_of(path: str) -> str:
-    if path.startswith("en/") or path.startswith("en\\"):
+def lang_of(path):
+    if path.startswith("en/"):
         return "en"
-    if path.startswith("pl/") or path.startswith("pl\\"):
+    if path.startswith("pl/"):
         return "pl"
     return "it"
 
-def header_html(lang: str) -> str:
+def header_html(lang):
     if lang == "en":
         home = "https://thebestjob.org/en/"
-        links = [
-            ("https://thebestjob.org/en/", "Home"),
-            ("https://thebestjob.org/en/poland-startup/", "Poland startup"),
-            ("https://thebestjob.org/en/digital-ai/", "Digital & AI"),
-            ("https://thebestjob.org/en/contact/", "Contact"),
-        ]
+        links = [("https://thebestjob.org/en/", "Home"), ("https://thebestjob.org/en/poland-startup/", "Poland startup"), ("https://thebestjob.org/en/digital-ai/", "Digital & AI"), ("https://thebestjob.org/en/contact/", "Contact")]
         li, lp, le = "", "", " active"
     elif lang == "pl":
         home = "https://thebestjob.org/pl/"
-        links = [
-            ("https://thebestjob.org/pl/", "Start"),
-            ("https://thebestjob.org/pl/startup-polska/", "Startup Polska"),
-            ("https://thebestjob.org/pl/cyfryzacja-ai/", "Cyfryzacja i AI"),
-            ("https://thebestjob.org/pl/kontakt/", "Kontakt"),
-        ]
+        links = [("https://thebestjob.org/pl/", "Start"), ("https://thebestjob.org/pl/startup-polska/", "Startup Polska"), ("https://thebestjob.org/pl/cyfryzacja-ai/", "Cyfryzacja i AI"), ("https://thebestjob.org/pl/kontakt/", "Kontakt")]
         li, lp, le = "", " active", ""
     else:
         home = "https://thebestjob.org/"
-        links = [
-            ("https://thebestjob.org/", "Home"),
-            ("https://thebestjob.org/startup-polonia/", "Startup Polonia"),
-            ("https://thebestjob.org/digitale-ai/", "Digitale & AI"),
-            ("https://thebestjob.org/contatti/", "Contatti"),
-        ]
+        links = [("https://thebestjob.org/", "Home"), ("https://thebestjob.org/startup-polonia/", "Startup Polonia"), ("https://thebestjob.org/digitale-ai/", "Digitale & AI"), ("https://thebestjob.org/contatti/", "Contatti")]
         li, lp, le = " active", "", ""
-    desk = "\n".join(f'      <a href="{h}">{t}</a>' for h, t in links)
-    mob = "\n".join(f'    <a href="{h}" onclick="tbjCloseMM()">{t}</a>' for h, t in links)
-    return f"""<div class=\"tbj-top\" id=\"tbj-top\">
-  <div class=\"tbj-top-inner\">
-    <a class=\"tbj-logo\" href=\"{home}\">The Best <span>Job</span></a>
-    <nav class=\"tbj-desk\" aria-label=\"Menu\">
-{desk}
+    desk = "\n".join('      <a href="%s">%s</a>' % (h, t) for h, t in links)
+    mob = "\n".join('    <a href="%s" onclick="tbjCloseMM()">%s</a>' % (h, t) for h, t in links)
+    return """<div class="tbj-top" id="tbj-top">
+  <div class="tbj-top-inner">
+    <a class="tbj-logo" href="%s">The Best <span>Job</span></a>
+    <nav class="tbj-desk" aria-label="Menu">
+%s
     </nav>
-    <div style=\"display:flex;align-items:center;gap:8px;margin-left:auto\">
-      <div class=\"tbj-lang\" aria-label=\"Language\">
-        <a href=\"/contatti/\" hreflang=\"it\" class=\"{li.strip()}\">IT</a>
-        <a href=\"/pl/kontakt/\" hreflang=\"pl\" class=\"{lp.strip()}\">PL</a>
-        <a href=\"/en/contact/\" hreflang=\"en\" class=\"{le.strip()}\">EN</a>
+    <div style="display:flex;align-items:center;gap:8px;margin-left:auto">
+      <div class="tbj-lang" aria-label="Language">
+        <a href="/contatti/" hreflang="it" class="%s">IT</a>
+        <a href="/pl/kontakt/" hreflang="pl" class="%s">PL</a>
+        <a href="/en/contact/" hreflang="en" class="%s">EN</a>
       </div>
-      <button type=\"button\" class=\"tbj-ham\" id=\"tbj-ham\" aria-label=\"Menu\" aria-expanded=\"false\" aria-controls=\"tbj-mm\" onclick=\"tbjToggleMM()\"><span></span></button>
+      <button type="button" class="tbj-ham" id="tbj-ham" aria-label="Menu" aria-expanded="false" aria-controls="tbj-mm" onclick="tbjToggleMM()"><span></span></button>
     </div>
   </div>
-  <nav class=\"tbj-mm\" id=\"tbj-mm\" hidden>
-{mob}
+  <nav class="tbj-mm" id="tbj-mm" hidden>
+%s
   </nav>
 </div>
 <script>
-function tbjToggleMM(){{var m=document.getElementById(\"tbj-mm\");var h=document.getElementById(\"tbj-ham\");var open=m.classList.toggle(\"open\");h.setAttribute(\"aria-expanded\",open?\"true\":\"false\");m.hidden=!open;}}
-function tbjCloseMM(){{var m=document.getElementById(\"tbj-mm\");var h=document.getElementById(\"tbj-ham\");if(!m)return;m.classList.remove(\"open\");m.hidden=true;if(h)h.setAttribute(\"aria-expanded\",\"false\");}}
+function tbjToggleMM(){var m=document.getElementById("tbj-mm");var h=document.getElementById("tbj-ham");var open=m.classList.toggle("open");h.setAttribute("aria-expanded",open?"true":"false");m.hidden=!open;}
+function tbjCloseMM(){var m=document.getElementById("tbj-mm");var h=document.getElementById("tbj-ham");if(!m)return;m.classList.remove("open");m.hidden=true;if(h)h.setAttribute("aria-expanded","false");}
 </script>
-"""
+""" % (home, desk, li.strip(), lp.strip(), le.strip(), mob)
 
 changed = []
 for path in pathlib.Path(".").rglob("*.html"):
@@ -109,18 +93,16 @@ for path in pathlib.Path(".").rglob("*.html"):
         continue
     lang = lang_of(rel)
     if "tbj-top-css" not in text:
-        text = text.replace("</head>", f'<style id="tbj-top-css">{CSS_SHARED}</style>\n</head>', 1)
+        text = text.replace("</head>", '<style id="tbj-top-css">' + CSS_SHARED + '</style>\n</head>', 1)
     m = re.search(r"<body[^>]*>", text, flags=re.I)
     if not m:
         continue
     if 'id="tbj-top"' in text:
         continue
     hdr = header_html(lang)
-    insert_at = m.end()
-    text = text[:insert_at] + "\n" + hdr + text[insert_at:]
+    text = text[:m.end()] + "\n" + hdr + text[m.end():]
     path.write_text(text, encoding="utf-8")
     changed.append(rel)
-
 print("Patched", len(changed), "pages")
 for c in sorted(changed):
     print(" ", c)

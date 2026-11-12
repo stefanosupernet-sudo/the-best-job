@@ -96,8 +96,65 @@
 @media(max-width:700px){.site-header .main-nav{width:100%}}
 
 </style>
+<style id="tbj-top-css">
+.tbj-top{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid #dce3f0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.tbj-top-inner{max-width:1100px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.tbj-top a.tbj-logo{font-weight:700;font-size:1.1rem;text-decoration:none;color:#312e81}
+.tbj-top a.tbj-logo span{color:#0e9bb8}
+.tbj-top nav.tbj-desk{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.tbj-top nav.tbj-desk a{color:#0f172a;text-decoration:none;font-size:.9rem;font-weight:500}
+.tbj-top nav.tbj-desk a:hover{color:#312e81}
+.tbj-lang{display:flex;gap:6px;font-size:.8rem}
+.tbj-lang a{color:#5c6578;text-decoration:none;padding:4px 8px;border-radius:6px;border:1px solid transparent}
+.tbj-lang a:hover,.tbj-lang a.active{color:#312e81;border-color:#dce3f0;background:#f3f5fb;font-weight:700}
+.tbj-ham{display:none;width:44px;height:44px;border:1px solid #dce3f0;border-radius:10px;background:#fff;cursor:pointer;align-items:center;justify-content:center;padding:0}
+.tbj-ham span,.tbj-ham span:before,.tbj-ham span:after{display:block;width:18px;height:2px;background:#0f172a;border-radius:1px;position:relative;transition:.2s}
+.tbj-ham span:before,.tbj-ham span:after{content:"";position:absolute;left:0}
+.tbj-ham span:before{top:-6px}.tbj-ham span:after{top:6px}
+.tbj-ham[aria-expanded="true"] span{background:transparent}
+.tbj-ham[aria-expanded="true"] span:before{top:0;transform:rotate(45deg)}
+.tbj-ham[aria-expanded="true"] span:after{top:0;transform:rotate(-45deg)}
+.tbj-mm{display:none;width:100%;flex-direction:column;gap:2px;padding:8px 16px 12px;border-top:1px solid #dce3f0}
+.tbj-mm.open{display:flex}
+.tbj-mm a{text-decoration:none;color:#0f172a;font-weight:500;padding:12px 4px;border-radius:8px;font-size:.95rem}
+.tbj-mm a:hover{color:#312e81;background:#f3f5fb}
+@media(max-width:720px){
+  .tbj-top nav.tbj-desk{display:none}
+  .tbj-ham{display:inline-flex}
+}
+</style>
 </head>
 <body>
+<div class="tbj-top" id="tbj-top">
+  <div class="tbj-top-inner">
+    <a class="tbj-logo" href="https://thebestjob.org/en/">The Best <span>Job</span></a>
+    <nav class="tbj-desk" aria-label="Menu">
+      <a href="https://thebestjob.org/en/">Home</a>
+      <a href="https://thebestjob.org/en/poland-startup/">Poland startup</a>
+      <a href="https://thebestjob.org/en/digital-ai/">Digital & AI</a>
+      <a href="https://thebestjob.org/en/contact/">Contact</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:8px;margin-left:auto">
+      <div class="tbj-lang" aria-label="Language">
+        <a href="/contatti/" hreflang="it" class="">IT</a>
+        <a href="/pl/kontakt/" hreflang="pl" class="">PL</a>
+        <a href="/en/contact/" hreflang="en" class="active">EN</a>
+      </div>
+      <button type="button" class="tbj-ham" id="tbj-ham" aria-label="Menu" aria-expanded="false" aria-controls="tbj-mm" onclick="tbjToggleMM()"><span></span></button>
+    </div>
+  </div>
+  <nav class="tbj-mm" id="tbj-mm" hidden>
+    <a href="https://thebestjob.org/en/" onclick="tbjCloseMM()">Home</a>
+    <a href="https://thebestjob.org/en/poland-startup/" onclick="tbjCloseMM()">Poland startup</a>
+    <a href="https://thebestjob.org/en/digital-ai/" onclick="tbjCloseMM()">Digital & AI</a>
+    <a href="https://thebestjob.org/en/contact/" onclick="tbjCloseMM()">Contact</a>
+  </nav>
+</div>
+<script>
+function tbjToggleMM(){var m=document.getElementById("tbj-mm");var h=document.getElementById("tbj-ham");var open=m.classList.toggle("open");h.setAttribute("aria-expanded",open?"true":"false");m.hidden=!open;}
+function tbjCloseMM(){var m=document.getElementById("tbj-mm");var h=document.getElementById("tbj-ham");if(!m)return;m.classList.remove("open");m.hidden=true;if(h)h.setAttribute("aria-expanded","false");}
+</script>
+
 <header class="site-header"><div class="inner">
 <a class="brand" href="https://thebestjob.org/en/"><img src="/logo-header.png" width="56" height="36" alt="The Best Job">The Best <span>Job</span></a>
 <ul class="main-nav">
