@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:The Best Job
+ORG:The Best Job
+TEL;TYPE=WORK,VOICE:+48788403091
+TEL;TYPE=CELL,VOICE:+48788403091
+EMAIL;TYPE=INTERNET,WORK:info@thebestjob.org
+URL:https://thebestjob.org
+ADR;TYPE=WORK:;;Pańska 98/101;Warszawa;;00-837;Poland
+NOTE:Responsabile: Fabio (fabio.depalma@thebestjob.org) | Marketing & AI: Stefano (stefano@thebestjob.org) | Tecnico: Dragan (dragan@thebestjob.org)
+END:VCARD
