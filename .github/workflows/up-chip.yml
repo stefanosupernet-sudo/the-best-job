@@ -1,0 +1,11 @@
+name: up-chip
+on:
+  workflow_dispatch:
+jobs:
+  u:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo 'use artifacts'
