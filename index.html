@@ -832,6 +832,45 @@
 #servizio-startup-polonia{scroll-margin-top:90px}
 #impatto-ai{scroll-margin-top:90px}
 </style>
+<!-- TBJ GA4 + Google Consent Mode v2 -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  analytics_storage: 'denied',
+  functionality_storage: 'granted',
+  personalization_storage: 'denied',
+  security_storage: 'granted',
+  wait_for_update: 500
+});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JC31K942H0"></script>
+<script>
+gtag('js', new Date());
+gtag('config', 'G-JC31K942H0', { anonymize_ip: true });
+window.tbjLoadAnalytics = function () {
+  var c = window.tbjConsent || {};
+  var a = !!c.analytics;
+  var m = !!c.marketing;
+  gtag('consent', 'update', {
+    analytics_storage: a ? 'granted' : 'denied',
+    ad_storage: m ? 'granted' : 'denied',
+    ad_user_data: m ? 'granted' : 'denied',
+    ad_personalization: m ? 'granted' : 'denied'
+  });
+};
+try {
+  var _raw = localStorage.getItem('tbj_cookie_consent_v1');
+  if (_raw) {
+    var _c = JSON.parse(_raw);
+    window.tbjConsent = _c;
+    if (_c && (_c.analytics || _c.marketing)) window.tbjLoadAnalytics();
+  }
+} catch (e) {}
+</script>
 </head>
 <body translate="no" class="notranslate">
 
@@ -2374,8 +2413,8 @@ if (window.TBJ_PATH_LANG && window.TBJ_PATH_LANG !== 'it') {
   }
   function apply(c) {
     window.tbjConsent = c;
-    // Hook for future analytics: only load if c.analytics === true
-    if (c && c.analytics && typeof window.tbjLoadAnalytics === 'function') {
+    // Sync Google Consent Mode (granted/denied) on every choice
+    if (typeof window.tbjLoadAnalytics === 'function') {
       try { window.tbjLoadAnalytics(); } catch (e) {}
     }
   }
